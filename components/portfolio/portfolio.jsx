@@ -17,7 +17,7 @@ export const Portfolio = () => {
 
   return (
     <div className={clsx(styles.body, "font-raleway")}>
-      <div className={styles.wrapper} ref={wrapperRef}>
+      <div className={styles.wrapper} style={{ backgroundImage: "url(./images/bg.jpg)" }} ref={wrapperRef}>
         <Preloader isVisible={isLoading} />
         {!isLoading && (
           <div ref={contentRef} className={styles.content}>
