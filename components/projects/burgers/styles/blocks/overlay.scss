@@ -1,0 +1,19 @@
+.overlay {
+  position: absolute;
+  z-index: 8;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #52125659;
+}
+
+.overlaySubmit {
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1e181f59;
+}

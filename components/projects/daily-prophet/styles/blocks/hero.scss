@@ -1,0 +1,114 @@
+.hero {
+  display: grid;
+  row-gap: 15px;
+}
+
+.heroExclusive {
+  display: flex;
+  column-gap: 25px;
+}
+
+.heroExclusiveWrapper {
+  padding-inline: 0.3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: #1c1b1b;
+  color: #dec8a7;
+  border-radius: 4px;
+  font-size: calc(var(--index) * 2.9);
+}
+
+.heroExclusiveDecore {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "exclusive";
+    bottom: 1.5%;
+    right: 1.5%;
+    -webkit-text-stroke: 2px #1c1b1b;
+  }
+}
+
+.heroExclusiveText {
+  font-size: calc(var(--index) * 0.77);
+}
+
+.dragon {
+  display: grid;
+  row-gap: 10px;
+}
+
+.dragonTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 25px;
+}
+
+.dragonDecore {
+  border-bottom: 8px solid currentColor;
+  font-size: calc(var(--index) * 1.75);
+  letter-spacing: 0.1em;
+  position: relative;
+  text-wrap: nowrap;
+
+  &:after {
+    position: absolute;
+    content: "sensation!";
+    bottom: 0;
+    right: 0;
+    transform-origin: left bottom;
+    rotate: 90deg;
+    translate: 82% 50%;
+    font-size: calc(var(--index) * 1.95);
+  }
+}
+
+.dragonTitle {
+  margin-bottom: 5px;
+  font-size: calc(var(--index) * 2);
+}
+
+.dragonBody {
+  padding-right: 4%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 25px;
+}
+
+.dragonRow {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.dragonColumn {
+  padding: 0.15em;
+  display: grid;
+  row-gap: 10px;
+  border-right: 2px solid currentColor;
+
+  &:last-child > .dragonText:first-child {
+    border-bottom: 2px solid currentColor;
+  }
+}
+
+.dragonText {
+  padding: 0.15em;
+  font-size: calc(var(--index) * 0.85);
+
+  &::first-letter {
+    font-size: calc(var(--index) * 1.95);
+  }
+}
+
+.dragonTextBig {
+  font-size: calc(var(--index) * 1.25);
+
+  &::first-letter {
+    font-size: calc(var(--index) * 2.25);
+  }
+}

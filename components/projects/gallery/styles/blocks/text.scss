@@ -1,0 +1,29 @@
+.text {
+  position: relative;
+  transform-style: preserve-3d;
+
+  .p {
+    max-width: 950px;
+  }
+}
+
+.textLeft {
+  right: 25vw;
+
+  @media (max-width: 768px) {
+    right: unset;
+  }
+}
+
+.textRight {
+  left: 25vw;
+
+  @media (max-width: 768px) {
+    left: unset;
+  }
+}
+
+.textTitle {
+  font-weight: 700;
+  font-size: calc(var(--index) * 2.3);
+}

@@ -1,0 +1,43 @@
+.dementors {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+
+  &::before {
+    content: "Dementors";
+    top: 0;
+    left: 0;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-align: center;
+    font-size: calc(var(--index) * 1.15);
+  }
+
+  &::after {
+    content: "Near";
+    top: 0;
+    right: 0;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    text-align: center;
+    font-size: calc(var(--index) * 2.5);
+  }
+}
+
+.dementorsContent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 15px;
+}
+
+.dementorsText {
+  padding: 0.5em;
+  background-color: #1c1b1b;
+  color: #dec8a7;
+  border-radius: 4px;
+  text-align: center;
+  font-size: calc(var(--index) * 0.9);
+  display: flex;
+  align-items: center;
+}

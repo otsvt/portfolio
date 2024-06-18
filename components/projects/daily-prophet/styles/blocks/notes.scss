@@ -1,0 +1,174 @@
+.notes {
+  margin-bottom: 25px;
+}
+
+.notesList {
+  margin-inline: -0.5em;
+  margin-bottom: 25px;
+  padding: 0.25em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 10px;
+  border-block: 1px solid currentColor;
+  box-shadow: inset 1px 1px 15px currentColor;
+}
+
+.notesListItem {
+  font-size: calc(var(--index) * 0.75);
+}
+
+.notesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  justify-content: center;
+  gap: 30px;
+  position: relative;
+}
+
+.notesCard {
+  padding-block: 1.2em 0.8em;
+  padding-inline: 0.8em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  row-gap: 15px;
+  background-color: #262424;
+  color: #dec8a7;
+  border-radius: 50% 50% 50% 50% / 25% 25% 75% 75%;
+  border: 1px solid currentColor;
+  box-shadow: 1px 1px 15px 5px #1c1b1b;
+  position: relative;
+  will-change: transform;
+
+  &:nth-child(odd) {
+    animation: to-right 25s infinite 5s linear;
+
+    @keyframes to-right {
+      0% {
+        left: 0;
+      }
+      25% {
+        left: 107%;
+      }
+      50% {
+        left: 107%;
+      }
+      75% {
+        left: 0;
+      }
+      100% {
+        left: 0;
+      }
+    }
+  }
+
+  &:nth-child(even) {
+    z-index: 9;
+    background-color: #dec8a7;
+    color: #1c1b1b;
+    animation: to-left 25s infinite 5s linear;
+
+    @keyframes to-left {
+      0% {
+        right: 0;
+      }
+      25% {
+        right: 107%;
+      }
+      50% {
+        right: 107%;
+      }
+      75% {
+        right: 0;
+      }
+      100% {
+        right: 0;
+      }
+    }
+
+    .notesCardNumber {
+      box-shadow: 1px 1px 10px #1c1b1b;
+
+      &::before {
+        animation: rotate-back 20s infinite linear;
+
+        @keyframes rotate-back {
+          0% {
+            rotate: 0deg;
+          }
+          100% {
+            rotate: -360deg;
+          }
+        }
+      }
+    }
+  }
+
+  & > * {
+    max-width: 85%;
+  }
+}
+
+.notesCardTitle {
+  border-bottom: 1px solid currentColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
+  font-size: calc(var(--index) * 1.15);
+
+  .span {
+    // font-family: "title";
+    font-size: calc(var(--index) * 1.25);
+    text-transform: uppercase;
+  }
+}
+
+.notesCardText {
+  flex-grow: 1;
+  font-size: calc(var(--index) * 1.15);
+}
+
+.notesCardNumber {
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  // font-family: "prophet";
+  font-size: calc(var(--index) * 1.35);
+  color: #d3b12a;
+  -webkit-text-stroke: 2px #1c1b1b;
+  box-shadow: 1px 1px 10px #dec8a7;
+  border: 1px solid #1c1b1b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url("/images/daily-prophet/inner-1.jpg");
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    opacity: 0.85;
+    animation: rotate 20s infinite linear;
+
+    @keyframes rotate {
+      0% {
+        rotate: 0deg;
+      }
+      100% {
+        rotate: 360deg;
+      }
+    }
+  }
+}

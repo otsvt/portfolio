@@ -1,0 +1,75 @@
+.music {
+  margin-bottom: 35px;
+  display: flex;
+  column-gap: 25px;
+}
+
+.musicSymbols {
+  padding-top: 4em;
+  align-self: flex-end;
+  max-width: 250px;
+  text-align: right;
+  font-size: calc(var(--index) * 0.85);
+  position: relative;
+
+  .p {
+    position: relative;
+    bottom: 0;
+    left: 0;
+
+    &:first-child {
+      position: absolute;
+      text-align: center;
+      rotate: 180deg;
+    }
+
+    &:last-child {
+      position: absolute;
+      text-align: left;
+    }
+  }
+}
+
+.musicMain {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.musicText {
+  padding: 1em;
+  max-height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  font-size: calc(var(--index) * 0.7);
+
+  .p {
+    &:first-letter {
+      font-size: calc(var(--index) * 2.25);
+    }
+
+    &:first-child {
+      writing-mode: vertical-rl;
+      text-orientation: sideways;
+    }
+
+    &:nth-child(2) {
+      writing-mode: vertical-rl;
+      text-orientation: sideways;
+      rotate: 180deg;
+    }
+
+    &:last-child {
+      padding-block: 0.25em;
+      border-block: 2px solid currentColor;
+      line-height: 1.6;
+
+      @media (min-width: 2100px) {
+        font-size: calc(var(--index) * 0.5);
+      }
+    }
+  }
+}

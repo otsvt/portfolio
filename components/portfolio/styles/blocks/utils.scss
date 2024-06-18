@@ -1,0 +1,40 @@
+.content,
+.heroSection,
+.hero,
+.mainHeader,
+.gallery > *,
+.galleryItem {
+  will-change: transform;
+}
+
+.body {
+  color: #f4efec;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  background-image: url(/images/bg.jpg);
+}
+
+.container {
+  padding-inline: 7vw;
+}
+
+.gallery {
+  display: flex;
+  align-items: center;
+  padding-block: calc(var(--index) * 8);
+
+  @media (max-width: 1024px) {
+    padding-block: 0;
+    padding-bottom: 100px;
+  }
+}
+
+.galleryWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 0%;
+  gap: calc(var(--index) * 5);
+}

@@ -1,0 +1,76 @@
+.cardDelivery {
+  min-height: 75px;
+  padding: 0.5em;
+  background-color: #f1f4f5;
+  border-radius: 8px;
+  border: 1px solid #661473;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+  @media (max-width: 830px) {
+    height: auto;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.3em;
+  }
+}
+
+.cardDeliveryDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cardDeliveryName {
+  background: linear-gradient(90deg, rgba(73, 16, 139, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @media (max-width: 830px) {
+    font-size: calc(var(--index) * 0.6);
+  }
+
+  @media (min-width: 2100px) {
+    font-size: calc(var(--index) * 0.7);
+  }
+}
+.cardDeliveryPrice {
+  background: radial-gradient(circle, rgba(226, 110, 229, 1) 0%, rgba(148, 0, 255, 0.6194852941176471) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: var(--index);
+
+  @media (max-width: 780px) {
+    display: block;
+    font-size: 12px;
+  }
+}
+
+.cardDeliveryImg {
+  height: 55px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+
+  @media (max-width: 830px) {
+    height: 45px;
+    width: 40px;
+  }
+
+  @media (max-width: 480px) {
+    height: 35px;
+    width: 30px;
+  }
+}
+
+.cardDeliveryRemove {
+  cursor: pointer;
+  transition: color 0.2s ease-in;
+  font-size: calc(var(--index) * 0.5);
+
+  &:hover {
+    color: #80258e;
+  }
+}

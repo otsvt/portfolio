@@ -1,0 +1,104 @@
+.breaking {
+  margin-bottom: 35px;
+}
+
+.breakingTop {
+  margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  justify-items: center;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.breakingDecore {
+  display: flex;
+
+  .svgEye {
+    height: 200px;
+    width: 150px;
+
+    &:nth-child(2) {
+      margin-inline: -0.5em;
+      rotate: 180deg;
+    }
+
+    &:nth-child(3) {
+      scale: -1 1;
+    }
+  }
+}
+
+.breakingTitle {
+  width: min-content;
+  font-size: calc(var(--index) * 1.75);
+  text-align: center;
+}
+
+.breakingTopText {
+  padding: 0.5em;
+  font-size: calc(var(--index) * 0.7);
+
+  .p {
+    padding: 0.25em;
+    border: 2px solid #1c1b1b;
+    border-radius: 4px;
+    text-align: center;
+
+    &:first-child {
+      background-color: #1c1b1b;
+      color: #dec8a7;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+.breakingMain {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 25px;
+}
+
+.breakingArticle {
+  padding: 0.25em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  font-size: calc(var(--index) * 0.7);
+
+  .p {
+    text-align: center;
+
+    &:first-letter {
+      font-size: calc(var(--index) * 1.55);
+    }
+
+    &:nth-child(1):first-letter,
+    &:nth-child(4):first-letter {
+      font-size: calc(var(--index) * 1.25);
+    }
+  }
+}
+
+.breakingFaculties {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 20px;
+  position: relative;
+  background-image: url("/images/daily-prophet/faculties-decore.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  .svgBreaking {
+    height: 200px;
+    fill: #1c1b1b;
+
+    @media (min-width: 2100px) {
+      height: 250px;
+    }
+  }
+}

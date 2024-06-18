@@ -1,0 +1,43 @@
+.realCheckbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  &:checked + .customCheckbox {
+    background-image: url("/images/burgers/check.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+.customCheckbox {
+  position: relative;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #feffac;
+  border-radius: 8px;
+  box-shadow: 3px 3px 5px #ffa1f5;
+  cursor: pointer;
+
+  @media (max-width: 730px) {
+    height: 10px;
+    width: 10px;
+    border-radius: 2px;
+  }
+
+  &:active {
+    top: 2px;
+  }
+}

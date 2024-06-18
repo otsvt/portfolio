@@ -1,0 +1,47 @@
+.wrapper {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f1da;
+  color: #1b242b;
+}
+
+.header {
+  font-size: calc(var(--index) * 1.9);
+  position: absolute;
+  text-align: center;
+}
+
+.title {
+  margin-top: 1em;
+  text-transform: uppercase;
+}
+
+.preloader {
+  transition: opacity 0.2s ease-in;
+}
+
+.button {
+  position: absolute;
+  height: clamp(2.5rem, 1.625rem + 2.92vw, 4.25rem);
+  width: clamp(2.5rem, 1.625rem + 2.92vw, 4.25rem);
+  top: 0;
+  right: 0;
+  transform: translateY(-110%);
+  border-radius: 50%;
+  box-shadow: -1px 1px 15px #c1cfbb;
+
+  &:hover {
+    .svgIcon {
+      fill: #3d4f47;
+    }
+  }
+}
+
+.svgIcon {
+  fill: #2d3a34;
+  transition: fill 0.2s ease-in;
+}

@@ -1,0 +1,14 @@
+.customScroll {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #000;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #302e2e;
+    border-radius: 4px;
+  }
+}

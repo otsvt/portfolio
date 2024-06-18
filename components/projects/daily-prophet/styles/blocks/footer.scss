@@ -1,0 +1,70 @@
+.magazineFooter {
+  padding: 0.25em;
+}
+
+.pagesList {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  column-gap: 20px;
+}
+
+.pagesListItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+
+  &:not(:nth-child(5))::after {
+    content: "";
+    position: absolute;
+    height: 7px;
+    width: 50px;
+    background-color: #1c1b1b;
+    border-radius: 2px;
+    top: 50%;
+    right: 0;
+    translate: 50% -50%;
+  }
+
+  &:nth-child(1) {
+    font-size: calc(var(--index) * 1.95);
+
+    .span {
+      font-size: calc(var(--index) * 2.55);
+    }
+  }
+
+  &:nth-child(2) {
+    font-size: calc(var(--index) * 1.5);
+
+    .span {
+      font-size: calc(var(--index) * 2.5);
+    }
+  }
+
+  &:nth-child(3) {
+    font-size: calc(var(--index) * 2.95);
+
+    .span {
+      font-size: calc(var(--index) * 1.5);
+    }
+  }
+
+  &:nth-child(4) {
+    font-size: calc(var(--index) * 1.55);
+
+    .span {
+      font-size: calc(var(--index) * 2.15);
+    }
+  }
+
+  &:nth-child(5) {
+    font-size: calc(var(--index) * 2.55);
+
+    .span {
+      font-size: calc(var(--index) * 2.35);
+    }
+  }
+}

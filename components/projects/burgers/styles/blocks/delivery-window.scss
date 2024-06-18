@@ -1,0 +1,148 @@
+.delivery {
+  padding: 2em;
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  min-width: 70vw;
+  min-height: 85vh;
+  background-color: #d3e0e7;
+  border-radius: 12px;
+  box-shadow: -3px 3px 15px #bc10d8;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 1330px) {
+    width: 95vw;
+  }
+
+  @media (max-width: 1000px) {
+    padding: 1em;
+  }
+}
+
+.deliveryTop {
+  padding: 0.3em;
+  border-bottom: 3px solid #661473;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: calc(var(--index) * 2);
+}
+.deliveryTitle {
+  align-self: flex-end;
+  background: linear-gradient(90deg, rgba(73, 16, 139, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.deliveryEsc {
+  cursor: pointer;
+  transition: color 0.2s ease-in;
+
+  &:hover {
+    color: #80258e;
+  }
+}
+
+.deliveryContent {
+  overflow-y: auto;
+  flex-grow: 1;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: min-content;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+.deliveryBottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  font-size: calc(var(--index) * 1.35);
+}
+
+.deliveryButton {
+  cursor: pointer;
+  transition: color 0.2s ease-in;
+
+  &:hover {
+    color: #80258e;
+  }
+}
+
+.deliveryWindow {
+  padding: 0.5em;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  height: clamp(18.75rem, 15.625rem + 10.42vw, 25rem);
+  width: clamp(15.625rem, 12.5rem + 10.42vw, 21.875rem);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  box-shadow: -1px 3px 15px #ffa1f5;
+}
+
+.deliveryWindowText {
+  position: relative;
+  padding: 1em;
+  height: 75%;
+  width: 100%;
+  border-radius: 8px;
+  text-align: center;
+  text-wrap: balance;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #80258e;
+  font-size: calc(var(--index) * 0.9);
+  background-image: url("/images/burgers/ride.jpg");
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  z-index: 99;
+}
+
+.deliveryWindowOverlay {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.deliveryWindowButton {
+  min-width: 40px;
+  min-height: 20px;
+  position: relative;
+  margin-bottom: 0.3em;
+  padding: 0.1em 0.5em;
+  font-size: var(--index);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  color: #fcfcfc;
+  background-color: #80258e;
+
+  &:active {
+    top: 2px;
+  }
+}

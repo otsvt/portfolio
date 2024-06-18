@@ -1,0 +1,197 @@
+.list {
+  width: clamp(31.25rem, 24.89rem + 13.25vw, 40.625rem);
+  list-style: decimal;
+  display: grid;
+
+  @media (max-width: 600px) {
+    width: 360px;
+    list-style: none;
+  }
+
+  @media (max-width: 400px) {
+    width: 335px;
+  }
+
+  @media (min-width: 2100px) {
+    width: 1000px;
+  }
+}
+
+.listItem {
+  text-indent: 1rem;
+
+  @media (max-width: 600px) {
+    text-indent: 0;
+    margin-left: -1.15rem;
+  }
+
+  &:nth-child(16) {
+    position: relative;
+    list-style: none;
+    text-indent: 0;
+    display: flex;
+    align-items: end;
+    margin-left: -1.15rem;
+    gap: 1.15rem;
+
+    &::before {
+      content: "16.";
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.82rem;
+
+      @media (max-width: 600px) {
+        display: none;
+      }
+    }
+  }
+
+  &:nth-child(17) {
+    position: relative;
+    list-style: none;
+    text-indent: 0;
+    display: flex;
+    align-items: end;
+    margin-left: -1.15rem;
+    gap: 1.15rem;
+
+    &::before {
+      content: "17.";
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.82rem;
+
+      @media (max-width: 600px) {
+        display: none;
+      }
+    }
+  }
+
+  &:nth-child(18) {
+    position: relative;
+    list-style: none;
+    text-indent: 0;
+    display: flex;
+    align-items: end;
+    margin-left: -1.15rem;
+    gap: 1.15rem;
+
+    &::before {
+      content: "18.";
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.82rem;
+
+      @media (max-width: 600px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.listItemInner {
+  text-indent: 1.8rem;
+}
+
+.listItemBigInner {
+  text-indent: 2.6rem;
+}
+
+.listItem,
+.listItemInner,
+.listItemBigInner {
+  font-size: clamp(0.75rem, 0.647rem + 0.39vw, 1rem);
+
+  &::marker {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.75rem;
+  }
+}
+
+.colorComment {
+  color: #66bb6a;
+}
+
+.colorReserve {
+  color: #ba68c8;
+}
+
+.colorConst {
+  color: #81d4fa;
+}
+
+.colorConst {
+  color: #81d4fa;
+}
+
+.colorWar {
+  color: #ff5555;
+}
+
+.colorComment,
+.colorConst,
+.colorReserve,
+.colorWar {
+  font-style: normal;
+}
+
+.typedOut {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 4s steps(100, end) forwards;
+  width: 0;
+}
+
+.typedOutSecond {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing-2 5s steps(100, end) 3s forwards;
+  width: 0;
+}
+
+.typedOutThird {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing-3 1s ease 7s forwards;
+  width: 0;
+}
+
+.blink {
+  animation: blinking 1.75s linear infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 5%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-2 {
+  from {
+    width: 5%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-3 {
+  from {
+    width: 5%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

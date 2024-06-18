@@ -1,0 +1,72 @@
+.menuCart {
+  padding: 1em;
+  position: fixed;
+  z-index: 9;
+  right: 5%;
+  bottom: 5%;
+  height: clamp(6.875rem, 4.792rem + 9.26vw, 13.525rem);
+  width: clamp(6.875rem, 4.792rem + 9.26vw, 13.525rem);
+  background-color: #d6e3e9e2;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 2100px) {
+    height: 20vh;
+    width: 12vw;
+  }
+
+  &:hover {
+    scale: 1.03;
+  }
+}
+
+.menuCartContent {
+  display: flex;
+  align-items: center;
+}
+
+.menuCartImg {
+  position: relative;
+
+  .img {
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
+
+    @media (max-width: 650px) {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
+.menuCartCounter {
+  min-width: 19px;
+  padding-inline: 0.07em;
+  position: absolute;
+  top: -50%;
+  right: -25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #feffac;
+  border-radius: 16px;
+  font-size: calc(var(--index) * 1.01);
+}
+
+.menuCartDecore {
+  font-size: calc(var(--index) * 1.9);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(73, 16, 139, 1) 100%);
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+}
+
+.menuCartCost {
+  width: 90px;
+  font-size: calc(var(--index) * 1.25);
+  background: linear-gradient(90deg, rgba(73, 16, 139, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,121 @@
+.magazine {
+  padding: 0.5em;
+  display: grid;
+  row-gap: 15px;
+
+  .video {
+    border-radius: 4px;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.magazineTop {
+  margin-bottom: 15px;
+  padding-block: 0.35em;
+  border-top: 5px solid currentColor;
+  border-bottom: 5px solid currentColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
+  position: relative;
+
+  &::after {
+    content: "release 7";
+    position: absolute;
+    bottom: 15%;
+    right: 0.5%;
+    font-size: calc(var(--index) * 1.25);
+    border-block: 1px solid currentColor;
+    rotate: -25deg;
+  }
+}
+
+.magazineTopImg {
+  .img {
+    width: clamp(50px, -0.754rem + 12.93vw, 135px);
+    aspect-ratio: 1;
+  }
+}
+
+.magazineTitle {
+  margin-bottom: 5px;
+  font-size: calc(var(--index) * 2.75);
+  display: inline-flex;
+  align-items: center;
+  column-gap: 50px;
+
+  .firstWord {
+    border-top: 4px solid currentColor;
+    position: relative;
+
+    &::after {
+      content: "The";
+      position: absolute;
+      top: 0;
+      right: 0;
+      translate: 125% -50%;
+      font-size: var(--index);
+    }
+  }
+
+  .secondWord {
+    border-top: 4px solid currentColor;
+    position: relative;
+
+    &::before {
+      content: "P";
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: -1.5%;
+      color: #d3b12a;
+    }
+  }
+}
+
+.magazineSubtitle {
+  letter-spacing: 0.1em;
+  font-size: calc(var(--index) * 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 15px;
+
+  &::before {
+    content: "";
+    width: 20px;
+    aspect-ratio: 1;
+    background-image: url("/images/daily-prophet/sparks.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    content: "";
+    width: 20px;
+    aspect-ratio: 1;
+    background-image: url("/images/daily-prophet/sparks.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    rotate: 180deg;
+  }
+}
+
+.magazineNews {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+  text-align: center;
+}
+
+.magazineBody {
+  padding: 0.5em;
+  border-top: 3px solid currentColor;
+  border-inline: 3px solid currentColor;
+  border-bottom: 3px solid currentColor;
+}

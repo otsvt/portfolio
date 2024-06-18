@@ -1,0 +1,23 @@
+.heroSection {
+  margin-bottom: clamp(2.5rem, -14.545rem + 27.27vw, 10rem);
+}
+
+.codepen {
+  position: absolute;
+  height: 600px;
+  left: clamp(1.563rem, -63.341rem + 103.85vw, 47.75rem);
+  top: clamp(1.25rem, -0.833rem + 3.33vw, 2.125rem);
+  box-shadow: -10px -10px 30px -5px #121417, 10px 10px 30px #121417, 0 0 500px 0 rgba(48, 48, 99, 0.258);
+
+  @media (max-width: 1000px) {
+    height: 55vh;
+  }
+
+  @media (max-width: 480px) {
+    left: 5px;
+  }
+
+  @media (min-width: 2100px) {
+    height: 700px;
+  }
+}

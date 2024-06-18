@@ -1,0 +1,12 @@
+.wrapper {
+  background: rgb(222, 199, 171);
+  background: radial-gradient(
+    circle,
+    rgba(222, 199, 171, 1) 22%,
+    rgba(210, 186, 156, 1) 100%,
+    rgba(244, 240, 235, 1) 100%
+  );
+  font-size: var(--index);
+  cursor: default;
+  line-height: 1.2;
+}

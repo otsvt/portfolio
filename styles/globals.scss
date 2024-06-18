@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --index: calc(1vw + 1vh);
+  --gutter: 30px;
+  --side-small: 26;
+  --side-big: 36;
+  --side-wide: 48;
+  --side-thin: 64;
+  --depth: 11050px;
+  --transition-gallery: 0.75s cubic-bezier(0.1, 0.6, 0, 1);
+}
