@@ -7,6 +7,7 @@ import { Codepen } from "./layouts/codepen";
 import { GalleryItem } from "./layouts/gallery-item";
 import { Title } from "./layouts/title";
 import { Decore } from "./layouts/decore";
+import bgIcon from "./images/bg.jpg";
 import styles from "./styles/style.module.scss";
 import clsx from "clsx";
 
@@ -17,7 +18,7 @@ export const Portfolio = () => {
 
   return (
     <div className={clsx(styles.body, "font-raleway")}>
-      <div className={styles.wrapper} style={{ backgroundImage: "url(./images/bg.jpg)" }} ref={wrapperRef}>
+      <div className={styles.wrapper} style={{ backgroundImage: bgIcon }} ref={wrapperRef}>
         <Preloader isVisible={isLoading} />
         {!isLoading && (
           <div ref={contentRef} className={styles.content}>
