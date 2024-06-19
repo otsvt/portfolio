@@ -2,14 +2,32 @@ import Image from "next/image";
 import styles from "../styles/style.module.scss";
 import clsx from "clsx";
 
-export const Breaking = () => {
+export const Breaking = ({ basePath }) => {
   return (
     <section className={styles.breaking}>
       <div className={styles.breakingTop}>
         <div className={styles.breakingDecore}>
-          <Image className={styles.svgEye} src="/images/daily-prophet/eye.svg" alt="eye" width={200} height={200} />
-          <Image className={styles.svgEye} src="/images/daily-prophet/eye.svg" alt="eye" width={200} height={200} />
-          <Image className={styles.svgEye} src="/images/daily-prophet/eye.svg" alt="eye" width={200} height={200} />
+          <Image
+            className={styles.svgEye}
+            src={`${basePath}/images/daily-prophet/eye.svg`}
+            alt="eye"
+            width={200}
+            height={200}
+          />
+          <Image
+            className={styles.svgEye}
+            src={`${basePath}/images/daily-prophet/eye.svg`}
+            alt="eye"
+            width={200}
+            height={200}
+          />
+          <Image
+            className={styles.svgEye}
+            src={`${basePath}/images/daily-prophet/eye.svg`}
+            alt="eye"
+            width={200}
+            height={200}
+          />
         </div>
         <h2 className={clsx(styles.breakingTitle, "font-harrypotter")}>Perilous Vanishing at school</h2>
         <div className={clsx(styles.breakingTopText, "font-lumos")}>
@@ -47,33 +65,42 @@ export const Breaking = () => {
           </p>
         </div>
         <div className={styles.breakingVideo}>
-          <video className={styles.video} src="/images/daily-prophet/breaking.mp4" autoPlay muted loop></video>
+          <video
+            className={styles.video}
+            src={`${basePath}}/images/daily-prophet/breaking.mp4`}
+            autoPlay
+            muted
+            loop
+          ></video>
         </div>
-        <div className={styles.breakingFaculties}>
+        <div
+          className={styles.breakingFaculties}
+          style={{ backgroundImage: `url(${basePath}/images/daily-prophet/faculties-decore.png)` }}
+        >
           <Image
             className={styles.svgBreaking}
-            src="/images/daily-prophet/gryffindor.svg"
+            src={`${basePath}/images/daily-prophet/gryffindor.svg`}
             alt="gryffindor"
             height={200}
             width={400}
           />
           <Image
             className={styles.svgBreaking}
-            src="/images/daily-prophet/hufflepuff.svg"
+            src={`${basePath}/images/daily-prophet/hufflepuff.svg`}
             alt="hufflepuff"
             height={200}
             width={400}
           />
           <Image
             className={styles.svgBreaking}
-            src="/images/daily-prophet/ravenclaw.svg"
+            src={`${basePath}/images/daily-prophet/ravenclaw.svg`}
             alt="ravenclaw"
             height={200}
             width={400}
           />
           <Image
             className={styles.svgBreaking}
-            src="/images/daily-prophet/slytherin.svg"
+            src={`${basePath}/images/daily-prophet/slytherin.svg`}
             alt="slytherin"
             height={200}
             width={400}
