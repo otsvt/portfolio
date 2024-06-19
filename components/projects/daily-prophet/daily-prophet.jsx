@@ -30,7 +30,7 @@ export const DailyProphet = ({ basePath }) => {
           <Notes basePath={basePath} />
           <Breaking basePath={basePath} />
           <Chronicles basePath={basePath} />
-          <Dementors />
+          <Dementors basePath={basePath} />
           <Politics />
           <MagazineFooter />
         </div>

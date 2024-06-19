@@ -1,7 +1,7 @@
 import styles from "../styles/style.module.scss";
 import clsx from "clsx";
 
-export const Dementors = () => {
+export const Dementors = ({ basePath }) => {
   return (
     <section className={clsx(styles.dementors, "after:font-anima before:font-anima")}>
       <div className={styles.dementorsContent}>
@@ -16,7 +16,13 @@ export const Dementors = () => {
           to aid in the ongoing investigation.
         </p>
         <div className={styles.dementorsVideo}>
-          <video className={styles.video} src="/images/daily-prophet/dementors.mp4" autoPlay muted loop></video>
+          <video
+            src={`${basePath}/images/daily-prophet/dementors.mp4`}
+            className={styles.video}
+            autoPlay
+            muted
+            loop
+          ></video>
         </div>
       </div>
     </section>
