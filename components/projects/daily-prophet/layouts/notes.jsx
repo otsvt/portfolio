@@ -28,8 +28,8 @@ const NotesCart = ({ basePath, item }) => {
         <span
           className={clsx(
             styles.span,
-            "font-harrypotter",
-            `before:bg-[url(${basePath}/images/daily-prophet/inner-1.jpg)]`
+            "font-harrypotter"
+            // `before:bg-[url(${basePath}/images/daily-prophet/inner-1.jpg)]`
           )}
         >
           {item.title}
