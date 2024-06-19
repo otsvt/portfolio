@@ -11,7 +11,7 @@
   overflow: hidden;
 
   &:checked + .customCheckbox {
-    background-image: url("/images/burgers/check.svg");
+    opacity: 1;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

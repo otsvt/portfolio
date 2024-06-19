@@ -8,7 +8,7 @@ import { UiOverlay } from "./uikit/ui-overlay";
 import styles from "./styles/styles.module.scss";
 import clsx from "clsx";
 
-export const Burgers = () => {
+export const Burgers = ({ basePath }) => {
   const {
     cart,
     isCartOpen,
@@ -25,13 +25,17 @@ export const Burgers = () => {
   } = useCart();
 
   return (
-    <div className={clsx(styles.wrapper, "font-badrips")}>
+    <div
+      className={clsx(styles.wrapper, "font-badrips")}
+      style={{ backgroundImage: `url(${basePath}/images/burgers/bg.jpg)` }}
+    >
       <main className={styles.mainWrapper}>
         {productChunks.map((chunk, index) => (
-          <Slider key={index} items={chunk} cart={cart} onProductChecked={onProductChecked} />
+          <Slider basePath={basePath} key={index} items={chunk} cart={cart} onProductChecked={onProductChecked} />
         ))}
       </main>
       <CartButton
+        basePath={basePath}
         isVisible={isCartVisible}
         isCartOpen={isCartOpen}
         counter={counterCart}
@@ -40,6 +44,7 @@ export const Burgers = () => {
       />
       <UiOverlay className={styles.overlay} isVisible={isCartOpen} callback={onCloseOverlay}>
         <Cart
+          basePath={basePath}
           cart={cart}
           cost={cartCost}
           onClose={onCartToggle}
@@ -48,7 +53,7 @@ export const Burgers = () => {
         />
       </UiOverlay>
       <UiOverlay className={styles.overlaySubmit} isVisible={isSubmitOpen}>
-        <CartSubmit onClick={onReset} />
+        <CartSubmit basePath={basePath} onClick={onReset} />
       </UiOverlay>
     </div>
   );

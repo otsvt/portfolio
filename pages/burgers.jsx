@@ -20,12 +20,12 @@ const lies = localFont({
   variable: "--font-lies",
 });
 
-export default function BurgersPage() {
+export default function BurgersPage({ basePath }) {
   useBodyHeight();
 
   return (
     <div className={`${badrips.variable} ${rock.variable} ${lies.variable}`}>
-      <Burgers />
+      <Burgers basePath={basePath} />
     </div>
   );
 }

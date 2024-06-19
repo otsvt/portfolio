@@ -5,7 +5,7 @@ import "swiper/css";
 import styles from "../styles/styles.module.scss";
 import clsx from "clsx";
 
-export const Slider = ({ items, cart, onProductChecked }) => {
+export const Slider = ({ basePath, items, cart, onProductChecked }) => {
   return (
     <Swiper
       modules={[Mousewheel]}
@@ -45,7 +45,12 @@ export const Slider = ({ items, cart, onProductChecked }) => {
       {items.map((item) => {
         return (
           <SwiperSlide key={item.id} className={clsx(styles.swiperWrapper, styles.sliderWrapper)}>
-            <SliderItem item={item} isChecked={cart.some((prod) => prod.id === item.id)} onChecked={onProductChecked} />
+            <SliderItem
+              basePath={basePath}
+              item={item}
+              isChecked={cart.some((prod) => prod.id === item.id)}
+              onChecked={onProductChecked}
+            />
           </SwiperSlide>
         );
       })}
@@ -53,12 +58,12 @@ export const Slider = ({ items, cart, onProductChecked }) => {
   );
 };
 
-const SliderItem = ({ item, onChecked, isChecked }) => {
+const SliderItem = ({ basePath, item, onChecked, isChecked }) => {
   return (
     <div className={clsx(styles.swiperSlide, styles.sliderItem)}>
       <article style={{ opacity: isChecked && 1 }} className={styles.card}>
         <div className={styles.cardImg}>
-          <Image className={styles.img} width={200} height={200} src={item.image} alt="alt" />
+          <Image className={styles.img} width={200} height={200} src={`${basePath}${item.image}`} alt="alt" />
         </div>
         <div className={styles.cardDescription}>
           <h3 className={styles.cardDescriptionTitle}>{item.title}</h3>
@@ -75,7 +80,10 @@ const SliderItem = ({ item, onChecked, isChecked }) => {
                 name="checkbox-btn"
                 type="checkbox"
               />
-              <div className={styles.customCheckbox}></div>
+              <div
+                className={styles.customCheckbox}
+                style={{ backgroundImage: `url(${basePath}/images/burgers/check.svg)`, opacity: 0 }}
+              ></div>
             </label>
           </div>
         </div>

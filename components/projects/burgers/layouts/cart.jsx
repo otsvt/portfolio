@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "../styles/styles.module.scss";
 import clsx from "clsx";
 
-export const Cart = ({ cart, cost, onClose, onRemove, onSubmitOpen }) => {
+export const Cart = ({ basePath, cart, cost, onClose, onRemove, onSubmitOpen }) => {
   return (
     <div className={styles.delivery} data-id="card">
       <div className={styles.deliveryTop}>
@@ -13,7 +13,7 @@ export const Cart = ({ cart, cost, onClose, onRemove, onSubmitOpen }) => {
       </div>
       <div className={styles.deliveryContent}>
         {cart.map((prod) => (
-          <CartItem key={prod.id} item={prod} onRemove={onRemove} />
+          <CartItem basePath={basePath} key={prod.id} item={prod} onRemove={onRemove} />
         ))}
       </div>
       <div className={styles.deliveryBottom}>
@@ -28,7 +28,7 @@ export const Cart = ({ cart, cost, onClose, onRemove, onSubmitOpen }) => {
   );
 };
 
-const CartItem = ({ item, onRemove }) => {
+const CartItem = ({ basePath, item, onRemove }) => {
   return (
     <div className={styles.cardDelivery}>
       <div className={styles.cardDeliveryDescription}>
@@ -42,7 +42,7 @@ const CartItem = ({ item, onRemove }) => {
           </span>
         </div>
       </div>
-      <Image width={100} height={100} src={item.image} alt="#" className={styles.cardDeliveryImg} />
+      <Image width={100} height={100} src={`${basePath}${item.image}`} alt="#" className={styles.cardDeliveryImg} />
     </div>
   );
 };
