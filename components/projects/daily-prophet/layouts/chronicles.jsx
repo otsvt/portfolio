@@ -33,7 +33,7 @@ export const Chronicles = ({ basePath }) => {
       <div className={styles.chroniclesMain}>
         <div className={styles.chroniclesGrid}>
           {chronicles.map((item, i) => (
-            <ChroniclesCard key={i} item={item} />
+            <ChroniclesCard basePath={basePath} key={i} item={item} />
           ))}
           <div className={styles.chroniclesPoiner}>
             <Image
@@ -108,7 +108,7 @@ export const Chronicles = ({ basePath }) => {
   );
 };
 
-const ChroniclesCard = ({ item }) => {
+const ChroniclesCard = ({ basePath, item }) => {
   return (
     <article className={styles.chroniclesCard}>
       <h4 className={clsx(styles.chroniclesCardTitle, "font-muggle")}>{item.title}</h4>
