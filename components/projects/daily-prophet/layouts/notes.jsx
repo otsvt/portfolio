@@ -2,7 +2,7 @@ import { noteCards, noteListItems } from "../data/notes";
 import styles from "../styles/style.module.scss";
 import clsx from "clsx";
 
-export const Notes = () => {
+export const Notes = ({ basePath }) => {
   return (
     <section className={styles.notes}>
       <ul className={styles.notesList}>
@@ -14,14 +14,14 @@ export const Notes = () => {
       </ul>
       <div className={styles.notesGrid}>
         {noteCards.map((card, i) => (
-          <NotesCart key={i} item={card} />
+          <NotesCart basePath={basePath} key={i} item={card} />
         ))}
       </div>
     </section>
   );
 };
 
-const NotesCart = ({ item }) => {
+const NotesCart = ({ basePath, item }) => {
   return (
     <article className={styles.notesCard}>
       <h3 className={clsx(styles.notesCardTitle, "font-dumbledor")}>

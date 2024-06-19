@@ -27,7 +27,7 @@ export const DailyProphet = ({ basePath }) => {
           <Hero basePath={basePath} />
           <Dream basePath={basePath} />
           <Music basePath={basePath} />
-          <Notes />
+          <Notes basePath={basePath} />
           <Breaking />
           <Chronicles />
           <Dementors />
