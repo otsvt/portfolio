@@ -1,7 +1,7 @@
 import styles from "../styles/style.module.scss";
 import clsx from "clsx";
 
-export const MagazineNews = () => {
+export const MagazineNews = ({ basePath }) => {
   return (
     <div className={styles.magazineNews}>
       <div className={styles.news}>
@@ -33,7 +33,10 @@ export const MagazineNews = () => {
           Anticipation rises for the epic clash between Holyhead Harpies and Falmouth Falcons.
         </p>
       </div>
-      <div class={styles.priceWrapper}>
+      <div
+        class={styles.priceWrapper}
+        style={{ backgroundImage: `url(${basePath}/images/daily-prophet/bg-black.png)` }}
+      >
         <div class={styles.price}>1 / 36</div>
       </div>
     </div>

@@ -25,7 +25,15 @@ const NotesCart = ({ item }) => {
   return (
     <article className={styles.notesCard}>
       <h3 className={clsx(styles.notesCardTitle, "font-dumbledor")}>
-        <span className={clsx(styles.span, "font-harrypotter")}>{item.title}</span>
+        <span
+          className={clsx(
+            styles.span,
+            "font-harrypotter",
+            `before:bg-[url(${basePath}/images/daily-prophet/inner-1.jpg)]`
+          )}
+        >
+          {item.title}
+        </span>
         {item.subtitle}
       </h3>
       <p className={styles.notesCardText}>{item.text}</p>

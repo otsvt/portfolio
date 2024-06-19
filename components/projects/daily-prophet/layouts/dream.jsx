@@ -3,7 +3,7 @@ import styles from "../styles/style.module.scss";
 import clsx from "clsx";
 import { dreamColumns } from "../data/dream-columns";
 
-export const Dream = () => {
+export const Dream = ({ basePath }) => {
   return (
     <section className={styles.dream}>
       <div className={clsx(styles.dreamDecore, "font-muggle")}>
@@ -19,7 +19,7 @@ export const Dream = () => {
             </div>
           ))}
           <div className={styles.dreamGridDecore}>
-            <Image height={500} width={500} src="/images/daily-prophet/pointer.webp" alt="pointer" />
+            <Image height={500} width={500} src={`${basePath}/images/daily-prophet/pointer.webp`} alt="pointer" />
           </div>
         </div>
       </div>

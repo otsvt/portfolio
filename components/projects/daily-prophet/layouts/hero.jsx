@@ -1,7 +1,7 @@
 import styles from "../styles/style.module.scss";
 import clsx from "clsx";
 
-export const Hero = () => {
+export const Hero = ({ basePath }) => {
   return (
     <section className={styles.hero}>
       <div className={styles.heroExclusive}>
@@ -49,7 +49,13 @@ export const Hero = () => {
             </div>
           </div>
           <div className={styles.dragonVideo}>
-            <video className={styles.video} src="/images/daily-prophet/dragon.mp4" autoPlay muted loop></video>
+            <video
+              className={styles.video}
+              src={`${basePath}/images/daily-prophet/dragon.mp4`}
+              autoPlay
+              muted
+              loop
+            ></video>
           </div>
         </div>
       </div>

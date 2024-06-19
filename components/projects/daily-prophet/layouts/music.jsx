@@ -1,7 +1,7 @@
 import styles from "../styles/style.module.scss";
 import clsx from "clsx";
 
-export const Music = () => {
+export const Music = ({ basePath }) => {
   return (
     <section className={styles.music}>
       <div className={clsx(styles.musicSymbols, "font-romance")}>
@@ -20,7 +20,7 @@ export const Music = () => {
       </div>
       <div className={styles.musicMain}>
         <div className={styles.musicVideo}>
-          <video src="/images/daily-prophet/music.mp4" autoPlay muted loop></video>
+          <video src={`${basePath}/images/daily-prophet/music.mp4`} autoPlay muted loop></video>
         </div>
         <div className={clsx(styles.musicText, "font-wolfpack")}>
           <p className={clsx(styles.p, "first-letter:font-dumbledor")}>

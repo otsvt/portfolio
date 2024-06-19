@@ -21,12 +21,12 @@ export const DailyProphet = ({ basePath }) => {
       <main className={styles.magazine}>
         <header className={styles.magazineHeader}>
           <MagazineTop basePath={basePath} />
-          <MagazineNews />
+          <MagazineNews basePath={basePath} />
         </header>
         <div class={styles.magazineBody}>
-          <Hero />
-          <Dream />
-          <Music />
+          <Hero basePath={basePath} />
+          <Dream basePath={basePath} />
+          <Music basePath={basePath} />
           <Notes />
           <Breaking />
           <Chronicles />
