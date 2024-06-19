@@ -82,7 +82,7 @@ const SliderItem = ({ basePath, item, onChecked, isChecked }) => {
               />
               <div
                 className={styles.customCheckbox}
-                style={{ backgroundImage: `url(${basePath}/images/burgers/check.svg)`, opacity: 0 }}
+                style={{ backgroundImage: isChecked && `url(${basePath}/images/burgers/check.svg)` }}
               ></div>
             </label>
           </div>
