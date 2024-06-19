@@ -8,7 +8,7 @@ import { Card } from "./layouts/card";
 import clsx from "clsx";
 import styles from "./styles/style.module.scss";
 
-export const Safety = () => {
+export const Safety = ({ basePath }) => {
   const { isPageLoad } = usePageLoader();
   const { galleryRef } = useGSAP();
   const { isOverlayVisible, selectedItem, onItemClick, onCloseClick } = useSafety();
@@ -16,7 +16,7 @@ export const Safety = () => {
   return (
     <div className={clsx(styles.wrapper, "font-pretty")}>
       <Header isPageLoad={isPageLoad} />
-      <Gallery isPageLoad={isPageLoad} ref={galleryRef} onClick={onItemClick} />
+      <Gallery basePath={basePath} isPageLoad={isPageLoad} ref={galleryRef} onClick={onItemClick} />
       <Overlay isVisible={isOverlayVisible} onClose={onCloseClick}>
         <Card item={selectedItem} onClose={onCloseClick} />
       </Overlay>

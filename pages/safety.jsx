@@ -20,12 +20,12 @@ const pretty = localFont({
   variable: "--font-pretty",
 });
 
-export default function SafetyPage() {
+export default function SafetyPage({ basePath }) {
   useBodyHeight();
 
   return (
     <div className={`${honey.variable} ${phobby.variable} ${pretty.variable}`}>
-      <Safety />
+      <Safety basePath={basePath} />
     </div>
   );
 }
