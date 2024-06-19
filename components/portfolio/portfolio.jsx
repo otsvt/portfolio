@@ -10,14 +10,14 @@ import { Decore } from "./layouts/decore";
 import styles from "./styles/style.module.scss";
 import clsx from "clsx";
 
-export const Portfolio = () => {
+export const Portfolio = ({ basePath }) => {
   useCustomScroll(styles.customScroll);
   const { isLoading } = useLoading();
   const { wrapperRef, contentRef, heroSectionRef, iconsLeftRef, iconsRightRef } = useGSAP(isLoading);
 
   return (
     <div className={clsx(styles.body, "font-raleway")}>
-      <div className={styles.wrapper} style={{ backgroundImage: "url(./images/bg.jpg)" }} ref={wrapperRef}>
+      <div className={styles.wrapper} style={{ backgroundImage: `url(${basePath}/images/bg.jpg)` }} ref={wrapperRef}>
         <Preloader isVisible={isLoading} />
         {!isLoading && (
           <div ref={contentRef} className={styles.content}>

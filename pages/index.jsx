@@ -14,12 +14,12 @@ const outfit = Outfit({
   variable: "--font-outfit",
 });
 
-export default function HomePage() {
+export default function HomePage({ basePath }) {
   useBodyHeight();
 
   return (
     <div className={`${raleway.variable} ${outfit.variable}`}>
-      <Portfolio />
+      <Portfolio basePath={basePath} />
     </div>
   );
 }
