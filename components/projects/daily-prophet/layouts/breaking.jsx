@@ -67,7 +67,7 @@ export const Breaking = ({ basePath }) => {
         <div className={styles.breakingVideo}>
           <video
             className={styles.video}
-            src={`${basePath}}/images/daily-prophet/breaking.mp4`}
+            src={`${basePath}/images/daily-prophet/breaking.mp4`}
             autoPlay
             muted
             loop

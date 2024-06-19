@@ -3,20 +3,28 @@ import { chronicles } from "../data/chronicles";
 import styles from "../styles/style.module.scss";
 import clsx from "clsx";
 
-export const Chronicles = () => {
+export const Chronicles = ({ basePath }) => {
+  const bgImage = `${basePath}/images/daily-prophet/flower-2.svg`;
+
   return (
     <section className={styles.chronicles}>
       <div className={styles.chroniclesTop}>
         <h2 className={clsx(styles.chroniclesTitle, "font-anima")}>Wizarding Chronicles</h2>
         <div className={styles.chroniclesDecore}>
           <Image
+            src={`${basePath}/images/daily-prophet/cloud-1.svg`}
             className={styles.svgCloud}
-            src="/images/daily-prophet/cloud-1.svg"
             alt="cloud"
             width={150}
             height={150}
           />
-          <Image className={styles.svgSun} src="/images/daily-prophet/sun.svg" alt="cloud" width={150} height={150} />
+          <Image
+            src={`${basePath}/images/daily-prophet/sun.svg`}
+            className={styles.svgSun}
+            alt="cloud"
+            width={150}
+            height={150}
+          />
         </div>
         <div className={styles.chroniclesSubtitle}>
           <span className={styles.span}>Wizarding Whispers</span> {`What's`} Brewing in Our World?
@@ -29,8 +37,8 @@ export const Chronicles = () => {
           ))}
           <div className={styles.chroniclesPoiner}>
             <Image
+              src={`${basePath}/images/daily-prophet/pointer.webp`}
               className={styles.img}
-              src="/images/daily-prophet/pointer.webp"
               width={300}
               height={300}
               alt="pointer"
@@ -38,8 +46,8 @@ export const Chronicles = () => {
           </div>
           <div className={styles.chroniclesPoiner}>
             <Image
+              src={`${basePath}/images/daily-prophet/pointer.webp`}
               className={styles.img}
-              src="/images/daily-prophet/pointer.webp"
               width={300}
               height={300}
               alt="pointer"
@@ -77,20 +85,20 @@ export const Chronicles = () => {
           </div>
         </div>
         <div className={clsx(styles.chroniclesColumn, "font-harrypotter")}>
-          <p className={styles.p}>
+          <p className={styles.p} style={{ "--bg-chrone": `url(${bgImage})` }}>
             Ministry Enforces New Policy Restricting Time-Turner Usage, Citing Temporal Disturbances in Recent
             Incidents.
           </p>
-          <p className={styles.p}>
+          <p className={styles.p} style={{ "--bg-chrone": `url(${bgImage})` }}>
             Spellsmiths Unveil Compact Portable Floo Network Devices for Instant Travel Convenience.
           </p>
-          <p className={styles.p}>
+          <p className={styles.p} style={{ "--bg-chrone": `url(${bgImage})` }}>
             Unprecedented Magical Duel between Aurors and Dark Arts Cultists Unfolds in Forbidden Forest.
           </p>
-          <p className={styles.p}>
+          <p className={styles.p} style={{ "--bg-chrone": `url(${bgImage})` }}>
             Wizarding Bakeries Introduce Levitating Pastries, Adding an Extra Dash of Magic to Treats.
           </p>
-          <p className={styles.p}>
+          <p className={styles.p} style={{ "--bg-chrone": `url(${bgImage})` }}>
             Herbology Professor Initiates Community Garden Project to Cultivate Rare Magical Plants and Promote
             Sustainability.
           </p>
@@ -110,15 +118,15 @@ const ChroniclesCard = ({ item }) => {
       </div>
       <div className={styles.chroniclesCardDecore}>
         <Image
+          src={`${basePath}/images/daily-prophet/divider.svg`}
           className={styles.svgDivider}
-          src="/images/daily-prophet/divider.svg"
           width={150}
           height={150}
           alt="divider"
         />
         <Image
+          src={`${basePath}/images/daily-prophet/black-sun.svg`}
           className={styles.svgBlackSun}
-          src="/images/daily-prophet/black-sun.svg"
           width={150}
           height={150}
           alt="black-sun"
