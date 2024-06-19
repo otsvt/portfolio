@@ -10,6 +10,10 @@
   @media (max-width: 1000px) {
     display: none;
   }
+
+  @media (max-hight: 800px) {
+    top: 5vh;
+  }
 }
 
 .decoreItem {
