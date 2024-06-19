@@ -19,16 +19,11 @@ export const MagazineTop = ({ basePath }) => {
           <p className={clsx(styles.firstWord, "after:font-hp")}>Daily</p>
           <p className={styles.secondWord}>Prophet</p>
         </div>
-        <p
-          className={clsx(
-            styles.magazineSubtitle,
-            "font-harrypotter",
-            `after:bg-[url(${basePath}/images/daily-prophet/sparks.svg)],
-             before:bg-[url(${basePath}/images/daily-prophet/sparks.svg)]`
-          )}
-        >
+        <div className={clsx(styles.magazineSubtitle, "font-harrypotter")}>
+          <Image src={`${basePath}/images/daily-prophet/sparks.svg`} width={20} height={20} alt="daily-prophet" />
           Unveiling Magic, One Headline at a Time!
-        </p>
+          <Image src={`${basePath}/images/daily-prophet/sparks.svg`} width={20} height={20} alt="daily-prophet" />
+        </div>
       </div>
     </div>
   );
