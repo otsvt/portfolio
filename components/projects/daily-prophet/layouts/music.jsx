@@ -20,7 +20,13 @@ export const Music = ({ basePath }) => {
       </div>
       <div className={styles.musicMain}>
         <div className={styles.musicVideo}>
-          <video src={`${basePath}/images/daily-prophet/music.mp4`} autoPlay muted loop></video>
+          <video
+            className={styles.video}
+            src={`${basePath}/images/daily-prophet/music.mp4`}
+            autoPlay
+            muted
+            loop
+          ></video>
         </div>
         <div className={clsx(styles.musicText, "font-wolfpack")}>
           <p className={clsx(styles.p, "first-letter:font-dumbledor")}>
