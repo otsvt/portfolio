@@ -14,33 +14,8 @@ export const Slider = ({ basePath, items, cart, onProductChecked }) => {
       mousewheel={true}
       centeredSlides={true}
       spaceBetween={25}
+      slidesPerView={"auto"}
       slidesOffsetBefore={-125}
-      breakpoints={{
-        320: {
-          slidesPerView: 3.5,
-        },
-        450: {
-          slidesPerView: 3.1,
-        },
-        550: {
-          slidesPerView: 2.75,
-        },
-        650: {
-          slidesPerView: 2.25,
-        },
-        850: {
-          slidesPerView: 1.9,
-        },
-        1000: {
-          slidesPerView: 1.5,
-        },
-        1500: {
-          slidesPerView: 1.6,
-        },
-        2100: {
-          slidesPerView: 2.1,
-        },
-      }}
     >
       {items.map((item) => {
         return (
