@@ -62,12 +62,12 @@ const fonts = `
   ${muggle.variable} ${romance.variable} ${wolfpack.variable}
 `;
 
-export default function DailyProphetPage() {
+export default function DailyProphetPage({ basePath }) {
   useBodyHeight();
 
   return (
     <div className={fonts}>
-      <DailyProphet />
+      <DailyProphet basePath={basePath} />
     </div>
   );
 }

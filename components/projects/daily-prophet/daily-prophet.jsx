@@ -13,14 +13,14 @@ import { MagazineFooter } from "./layouts/magazine-footer";
 import styles from "./styles/style.module.scss";
 import clsx from "clsx";
 
-export const DailyProphet = () => {
+export const DailyProphet = ({ basePath }) => {
   useCustomScroll(styles.customScroll);
 
   return (
     <div className={clsx(styles.wrapper, "font-hp")}>
       <main className={styles.magazine}>
         <header className={styles.magazineHeader}>
-          <MagazineTop />
+          <MagazineTop basePath={basePath} />
           <MagazineNews />
         </header>
         <div class={styles.magazineBody}>
