@@ -4,14 +4,16 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: grid;
-  width: 65vw;
+  display: flex;
+  width: 100%;
+  max-width: 65vw;
   grid-template-columns: 1fr auto;
   box-shadow: -15px 10px 50px #4b5f5d;
   transition: opacity 0.3s ease-in;
 }
 
 .cardDescription {
+  max-width: 70%;
   padding: 1.5em;
   background-color: #2d3a34;
   color: #94a491;
@@ -20,6 +22,10 @@
   font-size: var(--index);
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 
   .p {
     padding-bottom: 1em;
