@@ -48,6 +48,14 @@
     transition: opacity 0.3s ease, visibility 0.3s ease;
   }
 
+  .galleryImageBox {
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .galleryItemImages {
     width: 100%;
     padding-inline: 2rem;
@@ -60,6 +68,12 @@
     justify-content: center;
     gap: clamp(0.5rem, 0.333rem + 0.74vw, 1rem);
 
+    @media (max-width: 550px) {
+      top: 20%;
+      translate: 50% 0%;
+      padding-inline: unset;
+    }
+
     &::before {
       content: "technologies:";
       position: absolute;
@@ -67,6 +81,10 @@
       right: 50%;
       translate: 50% -150%;
       font-size: clamp(1rem, 0.917rem + 0.37vw, 1.25rem);
+
+      @media (max-width: 850px) {
+        font-size: 14px;
+      }
     }
   }
 
@@ -76,10 +94,29 @@
     translate: 50% 0;
     white-space: nowrap;
     color: #ffcb6b;
+
+    @media (max-width: 850px) {
+      font-size: 12px;
+    }
+
+    @media (max-width: 650px) {
+      text-wrap: balance;
+      text-align: center;
+    }
   }
 }
 
 .iconImage {
   height: clamp(1.563rem, 1.042rem + 2.31vw, 3.125rem);
   aspect-ratio: 1;
+
+  @media (max-width: 850px) {
+    height: 25px;
+    width: 25px;
+  }
+
+  @media (max-width: 550px) {
+    height: 18px;
+    width: 18px;
+  }
 }

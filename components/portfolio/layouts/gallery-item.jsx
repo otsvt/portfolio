@@ -11,7 +11,7 @@ export const GalleryItem = forwardRef(({ proj }, ref) => {
       <div className={styles.overlay}></div>
       <div className={styles.galleryItemImages}>
         {proj.icons?.map((img, i) => (
-          <div key={i} className="p-2 bg-zinc-900 rounded-md flex items-center justify-center">
+          <div key={i} className={clsx(styles.galleryImageBox, "bg-zinc-900")}>
             <Image className={styles.iconImage} src={img} alt={`overlay-image-${i}`} width={50} height={50} />
           </div>
         ))}

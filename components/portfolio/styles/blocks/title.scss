@@ -3,6 +3,10 @@
   font-size: calc(var(--index) * 6.5);
   z-index: 10;
 
+  @media (max-width: 600px) {
+    font-size: calc(var(--index) * 5);
+  }
+
   &::after {
     content: "aleksandr samoilenko";
     position: absolute;
@@ -17,7 +21,7 @@
     }
 
     @media (max-width: 640px) {
-      bottom: -100%;
+      bottom: -70%;
     }
   }
 }

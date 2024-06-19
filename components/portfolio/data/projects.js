@@ -18,7 +18,7 @@ import tailwindIcon from "../images/icons/tailwindcss.svg";
 export const projectsLeft = [
   { img: ticTacToe, hasAdapt: false, icons: [reactIcon, tailwindIcon], link: "/tic-tac-toe" },
   { img: dailyProphet, hasAdapt: false, icons: [htmlIcon, sassIcon], link: "/daily-prophet" },
-  { img: burgers, hasAdapt: true, icons: [reactIcon, sassIcon], link: "/burgers" },
+  { img: burgers, hasAdapt: false, icons: [reactIcon, sassIcon], link: "/burgers" },
 ];
 
 export const projectsRight = [
