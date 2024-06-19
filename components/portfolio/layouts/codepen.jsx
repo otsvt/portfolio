@@ -1,7 +1,3 @@
-/* eslint-disable react/jsx-no-comment-textnodes */
-import styles from "../styles/style.module.scss";
-
-import clsx from "clsx";
 import Image from "next/image";
 import { folders, optionIcons } from "../data/codepen";
 import openFolderIcon from "../images/codepen/open-folder.svg";
@@ -9,6 +5,8 @@ import arrowIcon from "../images/codepen/arrow.svg";
 import txtIcon from "../images/codepen/txt-icon.svg";
 import mdIcon from "../images/codepen/md-icon.svg";
 import jsIcon from "../images/codepen/js-icon.svg";
+import styles from "../styles/style.module.scss";
+import clsx from "clsx";
 
 export const Codepen = ({ classNames, speed, lag }) => {
   return (

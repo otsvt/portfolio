@@ -88,7 +88,7 @@ export const useGSAP = (isLoading) => {
         ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
       }
       if (smoothScrollInstanceRef.current) {
-        smoothScrollInstanceRef.current = null;
+        smoothScrollInstanceRef.current.kill();
       }
     };
   }, [isLoading]);
