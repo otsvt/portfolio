@@ -37,9 +37,6 @@ module.exports = {
         romance: ["var(--font-romance)"],
         wolfpack: ["var(--font-wolfpack)"],
       },
-      fontSize: {
-        portfolioH: "calc((1vh + 1vw) * 7)",
-      },
       colors: {
         portfolio: "#f4efec",
         mainText: "#cdc6c3",

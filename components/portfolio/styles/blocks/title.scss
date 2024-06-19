@@ -1,5 +1,6 @@
 .hPseudo {
   position: absolute;
+  font-size: calc(var(--index) * 6.5);
   z-index: 10;
 
   &::after {
