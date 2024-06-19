@@ -3,7 +3,7 @@ import styles from "../styles/style.module.scss";
 import { ButtonClose } from "../icons/btn-close";
 import clsx from "clsx";
 
-export const Card = ({ item, onClose }) => {
+export const Card = ({ basePath, item, onClose }) => {
   if (!item) return;
 
   return (
@@ -16,7 +16,7 @@ export const Card = ({ item, onClose }) => {
         </div>
       </div>
       <div className={styles.cardImg}>
-        <Image className={styles.img} width={500} height={700} src={item.image} alt="alt" />
+        <Image className={styles.img} width={500} height={700} src={`${basePath}${item.image}`} alt="alt" />
       </div>
       <button onClick={onClose} className={styles.button}>
         <ButtonClose classNames={styles.svgIcon} />

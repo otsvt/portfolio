@@ -18,7 +18,7 @@ export const Safety = ({ basePath }) => {
       <Header isPageLoad={isPageLoad} />
       <Gallery basePath={basePath} isPageLoad={isPageLoad} ref={galleryRef} onClick={onItemClick} />
       <Overlay isVisible={isOverlayVisible} onClose={onCloseClick}>
-        <Card item={selectedItem} onClose={onCloseClick} />
+        <Card basePath={basePath} item={selectedItem} onClose={onCloseClick} />
       </Overlay>
     </div>
   );
