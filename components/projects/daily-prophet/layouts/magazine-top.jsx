@@ -23,8 +23,8 @@ export const MagazineTop = ({ basePath }) => {
           className={clsx(
             styles.magazineSubtitle,
             "font-harrypotter",
-            `after:bg-[${basePath}/images/daily-prophet/sparks.svg],
-             before:bg-[${basePath}/images/daily-prophet/sparks.svg]`
+            `after:bg-[url(${basePath}/images/daily-prophet/sparks.svg)],
+             before:bg-[url(${basePath}/images/daily-prophet/sparks.svg)]`
           )}
         >
           Unveiling Magic, One Headline at a Time!
