@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { gsap } from "../../../libs/gsap/gsap.min-2";
+import gsap from "gsap";
 import draggable from "../../../libs/gsap/Draggable.min.js";
 
 export const useGSAP = () => {
