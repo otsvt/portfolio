@@ -8,30 +8,43 @@ export const useGSAPRoute = () => {
   const router = useRouter();
 
   useEffect(() => {
-    const handleRouteChangeStart = () => {
+    const originalPush = router.push;
+
+    router.push = async (...args) => {
       if (isAnimating.current) return;
       isAnimating.current = true;
 
-      gsap.timeline().fromTo(loaderRef.current, { x: "-100%" }, { x: "0%" });
+      await new Promise((resolve) => {
+        gsap
+          .timeline({
+            onComplete: resolve,
+          })
+          .fromTo(loaderRef.current, { x: "-100%" }, { x: "0%" });
+      });
+
+      return originalPush(...args);
     };
 
     const handleRouteChangeComplete = () => {
       gsap
         .timeline({
-          onComplete: () => (isAnimating.current = false),
+          onComplete: () => {
+            isAnimating.current = false;
+          },
         })
-        .fromTo(loaderRef.current, { x: "0%" }, { x: "100%", delay: 0.8 });
+        .fromTo(loaderRef.current, { x: "0%" }, { x: "100%", delay: 0.5 });
     };
 
-    const handleRouteChangeError = () => (isAnimating.current = false);
+    const handleRouteChangeError = () => {
+      isAnimating.current = false;
+    };
 
-    router.events.on("routeChangeStart", handleRouteChangeStart);
     router.events.on("routeChangeComplete", handleRouteChangeComplete);
     router.events.on("routeChangeError", handleRouteChangeError);
 
     return () => {
-      router.events.off("routeChangeStart", handleRouteChangeStart);
-      router.events.on("routeChangeComplete", handleRouteChangeComplete);
+      router.push = originalPush;
+      router.events.off("routeChangeComplete", handleRouteChangeComplete);
       router.events.off("routeChangeError", handleRouteChangeError);
     };
   }, [router]);
