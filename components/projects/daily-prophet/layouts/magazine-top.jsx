@@ -7,6 +7,7 @@ export const MagazineTop = ({ basePath }) => {
     <div className={clsx(styles.magazineTop, "after:font-wizards")}>
       <div className={styles.magazineTopImg}>
         <Image
+          priority
           className={styles.img}
           src={`${basePath}/images/daily-prophet/daily-prophet.png`}
           width={135}
@@ -20,9 +21,21 @@ export const MagazineTop = ({ basePath }) => {
           <p className={styles.secondWord}>Prophet</p>
         </div>
         <div className={clsx(styles.magazineSubtitle, "font-harrypotter")}>
-          <Image src={`${basePath}/images/daily-prophet/sparks.svg`} width={20} height={20} alt="daily-prophet" />
+          <Image
+            priority
+            src={`${basePath}/images/daily-prophet/sparks.svg`}
+            width={20}
+            height={20}
+            alt="daily-prophet"
+          />
           Unveiling Magic, One Headline at a Time!
-          <Image src={`${basePath}/images/daily-prophet/sparks.svg`} width={20} height={20} alt="daily-prophet" />
+          <Image
+            priority
+            src={`${basePath}/images/daily-prophet/sparks.svg`}
+            width={20}
+            height={20}
+            alt="daily-prophet"
+          />
         </div>
       </div>
     </div>

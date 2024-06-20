@@ -19,7 +19,13 @@ export const Dream = ({ basePath }) => {
             </div>
           ))}
           <div className={styles.dreamGridDecore}>
-            <Image height={500} width={500} src={`${basePath}/images/daily-prophet/pointer.webp`} alt="pointer" />
+            <Image
+              priority
+              height={500}
+              width={500}
+              src={`${basePath}/images/daily-prophet/pointer.webp`}
+              alt="pointer"
+            />
           </div>
         </div>
       </div>
