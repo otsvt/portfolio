@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useLayoutEffect } from "react";
 import gsap from "../../libs/gsap/gsap.min.js";
 import ScrollSmoother from "../../libs/gsap/ScrollSmoother.min.js";
 import ScrollTrigger from "../../libs/gsap/ScrollTrigger.min.js";
@@ -11,7 +11,7 @@ export const useGSAP = (isLoading) => {
   const iconsRightRef = useRef([]);
   const smoothScrollInstanceRef = useRef(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
     if (ScrollTrigger.isTouch !== 1) {
