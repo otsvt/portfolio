@@ -10,6 +10,15 @@
     height: 50rem;
   }
 
+  @media (max-width: 768px) {
+    max-width: unset;
+    height: clamp(15.625rem, -5.208rem + 69.44vw, 28.125rem);
+  }
+
+  @media (max-width: 480px) {
+    height: 250px;
+  }
+
   &:hover {
     .overlay {
       opacity: 0.8;

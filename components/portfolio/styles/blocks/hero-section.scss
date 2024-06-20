@@ -1,5 +1,9 @@
 .heroSection {
   margin-bottom: clamp(2.5rem, -14.545rem + 27.27vw, 10rem);
+
+  @media (max-width: 480px) {
+    margin-bottom: 0;
+  }
 }
 
 .codepen {

@@ -20,6 +20,7 @@
   display: flex;
   align-items: center;
   padding-block: calc(var(--index) * 8);
+  gap: 20px;
 
   @media (max-width: 1024px) {
     padding-block: 0;
@@ -33,4 +34,8 @@
   align-items: center;
   flex: 1 1 0%;
   gap: calc(var(--index) * 5);
+
+  @media (max-width: 550px) {
+    gap: 30px;
+  }
 }
