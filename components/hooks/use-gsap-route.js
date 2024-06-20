@@ -12,7 +12,7 @@ export const useGSAPRoute = () => {
       if (isAnimating.current) return;
       isAnimating.current = true;
 
-      gsap.timeline().fromTo(loaderRef.current, { x: "-100%" }, { x: "0%", duration: 0.5 });
+      gsap.timeline().fromTo(loaderRef.current, { x: "-100%" }, { x: "0%" });
     };
 
     const handleRouteChangeComplete = () => {
@@ -20,7 +20,7 @@ export const useGSAPRoute = () => {
         .timeline({
           onComplete: () => (isAnimating.current = false),
         })
-        .fromTo(loaderRef.current, { x: "0%" }, { x: "100%", duration: 0.5, delay: 0.8 });
+        .fromTo(loaderRef.current, { x: "0%" }, { x: "100%", delay: 0.8 });
     };
 
     const handleRouteChangeError = () => (isAnimating.current = false);
