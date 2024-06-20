@@ -1,3 +1,4 @@
+"use client";
 import { usePageLoader } from "./hooks/use-page-loader";
 import { useGSAP } from "./hooks/use-gsap-animation";
 import { useSafety } from "./hooks/use-safety";

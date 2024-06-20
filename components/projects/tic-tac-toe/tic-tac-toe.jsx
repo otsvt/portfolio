@@ -1,3 +1,4 @@
+"use client";
 import { useMenuOptions } from "./hooks/use-menu-options";
 import { Menu } from "./menu/menu";
 import { Game } from "./game/game";

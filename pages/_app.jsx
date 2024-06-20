@@ -1,3 +1,4 @@
+"use client";
 import { useRouter } from "next/router";
 import { useGSAPRoute } from "@/components/hooks/use-gsap-route";
 import "@/styles/globals.scss";

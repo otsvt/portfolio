@@ -1,3 +1,4 @@
+"use client";
 import localFont from "next/font/local";
 import { useBodyHeight } from "@/components/hooks/use-body-height";
 import { Safety } from "@/components/projects/safety/safety";

@@ -1,3 +1,4 @@
+"use client";
 import { projectsLeft, projectsRight } from "./data/projects";
 import { useCustomScroll } from "../hooks/use-custom-scroll";
 import { useGSAP } from "./hooks/use-gsap-animation";

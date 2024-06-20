@@ -1,3 +1,4 @@
+"use client";
 import { useCustomScroll } from "@/components/hooks/use-custom-scroll";
 import { MagazineTop } from "./layouts/magazine-top";
 import { MagazineNews } from "./layouts/magazine-news";

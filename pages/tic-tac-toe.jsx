@@ -1,3 +1,4 @@
+"use client";
 import { Roboto } from "next/font/google";
 import { useBodyHeight } from "@/components/hooks/use-body-height";
 import { TicTacToe } from "@/components/projects/tic-tac-toe/tic-tac-toe";

@@ -1,3 +1,4 @@
+"use client";
 import { Raleway, Outfit } from "next/font/google";
 import { useBodyHeight } from "@/components/hooks/use-body-height";
 import { Portfolio } from "@/components/portfolio/portfolio";

@@ -1,3 +1,4 @@
+"use client";
 import { useCart } from "./hooks/use-cart";
 import { productChunks } from "./data/products";
 import { Slider } from "./layouts/slider";

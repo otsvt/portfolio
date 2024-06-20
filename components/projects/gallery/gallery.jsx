@@ -1,3 +1,4 @@
+"use client";
 import { useCustomScroll } from "../../hooks/use-custom-scroll";
 import { useFrameScroll } from "./hooks/use-frame-scroll";
 import { frames } from "./data/frames";
