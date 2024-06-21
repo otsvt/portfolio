@@ -36,6 +36,7 @@ module.exports = {
         muggle: ["var(--font-muggle)"],
         romance: ["var(--font-romance)"],
         wolfpack: ["var(--font-wolfpack)"],
+        poppins: ["var(--font-poppins)"],
       },
       colors: {
         portfolio: "#f4efec",
