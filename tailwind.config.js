@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "selector",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -45,6 +46,7 @@ module.exports = {
         window: "#383838",
         textLg: "rgba(255, 255, 255, 0.87)",
         textMd: "rgba(255, 255, 255, 0.6)",
+        weatherLight: "rgb(41, 41, 41)",
       },
       gap: {
         galleryGap: "calc((1vh + 1vw) * 5)",
@@ -56,9 +58,25 @@ module.exports = {
           "0px 2px 4px 0px rgba(0, 0, 0, 0.2),0px 1px 10px 0px rgba(0, 0, 0, 0.12),0px 4px 5px 0px rgba(0, 0, 0, 0.14)",
         infoInner:
           "5px 5px 5px 3px rgba(0, 0, 0, 0.2), inset 2px 2px 4px 3px rgba(0, 0, 0, 0.2), inset 2px 6px 6px 7px rgba(0, 0, 0, 0.12), inset 5px 4px 6px 3px rgba(0, 0, 0, 0.14)",
+        weatherFrame: "10px 10px 4px 0px rgba(0, 0, 0, 0.5)",
       },
       borderColor: {
         options: "rgba(255, 255, 255, 0.12)",
+      },
+      backgroundColor: {
+        weatherLight: "#EAEBEC",
+        weatherDark: "#292929",
+        weatherFrame: "rgb(68, 68, 68)",
+        weatherHourly: "rgb(55, 54, 54)",
+      },
+      animation: {
+        error: "forError 1s ease 4s forwards",
+      },
+      keyframes: {
+        forError: {
+          "0%": { opacity: 1, top: "-28px" },
+          "100%": { opacity: 0, top: "-14px" },
+        },
       },
     },
   },

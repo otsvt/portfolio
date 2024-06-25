@@ -1,6 +1,9 @@
 "use client";
 import { Poppins } from "next/font/google";
 import { useBodyHeight } from "@/components/hooks/use-body-height";
+import { Weather } from "@/components/projects/weather/Weather";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -9,8 +12,17 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-export default function WeatherPage() {
+const queryClient = new QueryClient();
+
+export default function WeatherPage({ basePath }) {
   useBodyHeight();
 
-  return <div className={`${poppins.variable}`}></div>;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <div className={`${poppins.variable}`}>
+        <Weather />
+      </div>
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
+  );
 }
