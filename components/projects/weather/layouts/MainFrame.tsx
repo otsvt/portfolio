@@ -4,12 +4,13 @@ import { IMainInfo } from "../types/interfeces";
 import { capitalizeWords } from "../utils/capitalize-words";
 
 interface IMainFrame {
+  basePath: string | "";
   info: IMainInfo;
   isSuccess: boolean;
   isFetching: boolean;
 }
 
-export const MainFrame: FC<IMainFrame> = ({ info, isSuccess, isFetching }) => {
+export const MainFrame: FC<IMainFrame> = ({ basePath, info, isSuccess, isFetching }) => {
   const cityName = info?.city ? capitalizeWords(info.city) : "";
 
   return (
@@ -25,7 +26,9 @@ export const MainFrame: FC<IMainFrame> = ({ info, isSuccess, isFetching }) => {
         !isSuccess || isFetching ? "blur-sm" : ""
       )}
       style={{
-        backgroundImage: info.isDay ? "url(/images/weather/bg-day.png)" : "url(/images/weather/bg-night.png)",
+        backgroundImage: info.isDay
+          ? `url(${basePath}/images/weather/bg-day.png)`
+          : `url(${basePath}/images/weather/bg-night.png)`,
       }}
     >
       <h1 className="text-4xl font-bold">{info?.region || "Europe"}</h1>

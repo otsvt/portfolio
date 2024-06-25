@@ -31,7 +31,7 @@ export const Weather: FC<IWeather> = ({ basePath }) => {
         getRandomData={getRandomData}
       />
       <Frames>
-        <MainFrame info={mainInfo} isSuccess={isSuccess} isFetching={isFetching} />
+        <MainFrame basePath={basePath} info={mainInfo} isSuccess={isSuccess} isFetching={isFetching} />
         <DetailsFrame theme={theme} />
       </Frames>
       <Frames>
