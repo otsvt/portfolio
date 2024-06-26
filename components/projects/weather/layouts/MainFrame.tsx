@@ -11,7 +11,7 @@ interface IMainFrame {
 }
 
 export const MainFrame: FC<IMainFrame> = ({ basePath, info, isSuccess, isFetching }) => {
-  const cityName = info?.city ? capitalizeWords(info.city) : "";
+  const cityName = info.city ? capitalizeWords(info.city) : "";
 
   return (
     <div
@@ -31,11 +31,11 @@ export const MainFrame: FC<IMainFrame> = ({ basePath, info, isSuccess, isFetchin
           : `url(${basePath}/images/weather/bg-night.png)`,
       }}
     >
-      <h1 className="text-4xl font-bold">{info?.region || "Europe"}</h1>
+      <h1 className="text-4xl font-bold">{info.region || "Europe"}</h1>
       <div className="flex flex-col items-center gap-1">
         <span className="mb-6 text-6xl font-bold text-center">{isFetching ? "" : (isSuccess && cityName) || ""}</span>
         <span className="text-xl font-semibold">
-          {info?.day}, {info?.number} {info?.month}
+          {info.day}, {info.number} {info.month}
         </span>
       </div>
     </div>

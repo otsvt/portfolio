@@ -1,4 +1,4 @@
-import { date, daysOfWeek, months } from "../data/dates";
+import { DATE, DAYS_OF_WEEK, MONTHS } from "../data/dates";
 
 export const getMainInfo = (data: any, city?: string) => {
   let currentDate = "";
@@ -19,9 +19,9 @@ export const getMainInfo = (data: any, city?: string) => {
 
   return {
     region: currentRegion,
-    day: daysOfWeek[date.getDay()],
+    day: DAYS_OF_WEEK[DATE.getDay()].slice(0, 3),
     number: parseInt(currentDay),
-    month: months[parseInt(currentMonth)],
+    month: MONTHS[parseInt(currentMonth) - 1],
     time: currentTime,
     city,
     isDay,

@@ -1,8 +1,8 @@
-export const date = new Date();
+export const DATE = new Date();
 
-export const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+export const DAYS_OF_WEEK = ["Sunday", "Monday", "Tuesday", "Wednsday", "Thursday", "Friday", "Saturday"];
 
-export const months = [
+export const MONTHS = [
   "January",
   "February",
   "March",

@@ -20,7 +20,7 @@ export default function WeatherPage({ basePath }) {
   return (
     <QueryClientProvider client={queryClient}>
       <div className={`${poppins.variable}`}>
-        <Weather />
+        <Weather basePath={basePath} />
       </div>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
