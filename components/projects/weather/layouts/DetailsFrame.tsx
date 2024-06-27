@@ -19,7 +19,7 @@ import clsx from "clsx";
 
 interface IDetails {
   theme: string;
-  info: Partial<IDetailsInfo>;
+  info: IDetailsInfo;
   isUpdating: boolean;
 }
 
@@ -43,7 +43,7 @@ export const DetailsFrame: FC<IDetails> = ({ theme, info, isUpdating }) => {
   );
 };
 
-const LeftDetails: FC<{ theme: string; info: Partial<IDetailsInfo> }> = ({ theme, info }) => {
+const LeftDetails: FC<{ theme: string; info: IDetailsInfo }> = ({ theme, info }) => {
   return (
     <div className="grid gap-4">
       <div
@@ -79,16 +79,16 @@ const LeftDetails: FC<{ theme: string; info: Partial<IDetailsInfo> }> = ({ theme
   );
 };
 
-const MainDetails: FC<{ info: Partial<IDetailsInfo> }> = ({ info }) => {
+const MainDetails: FC<{ info: IDetailsInfo }> = ({ info }) => {
   return (
     <div className="flex flex-col items-center gap-4">
-      {renderIcon(info.weather, "w-40 h-40")}
+      {renderIcon(info.weather || "", "w-40 h-40")}
       <span className="mt-auto text-3xl font-semibold">{info.weather || "Sunny"}</span>
     </div>
   );
 };
 
-const RightDetails: FC<{ theme: string; info: Partial<IDetailsInfo> }> = ({ theme, info }) => {
+const RightDetails: FC<{ theme: string; info: IDetailsInfo }> = ({ theme, info }) => {
   return (
     <div className="w-[185px] grid grid-cols-2 items-center  gap-4">
       <div className="flex flex-col items-center">

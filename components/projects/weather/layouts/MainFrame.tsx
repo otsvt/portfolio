@@ -5,7 +5,7 @@ import clsx from "clsx";
 
 interface IMainFrame {
   basePath: string;
-  info: Partial<IMainInfo>;
+  info: IMainInfo;
   isUpdating: boolean;
 }
 

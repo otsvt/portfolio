@@ -18,8 +18,8 @@ export const Weather: FC<{ basePath: string }> = ({ basePath }) => {
   const { theme, changeTheme } = useTheme();
   const { data, error, inputRef, isUpdating, handleSubmit, getRandomData } = useWeatherQuery();
 
-  const mainInfo: Partial<IMainInfo> = getMainInfo(data, inputRef.current?.value);
-  const detailsInfo: Partial<IDetailsInfo> = getDetailsInfo(data);
+  const mainInfo: IMainInfo = getMainInfo(data, inputRef.current?.value);
+  const detailsInfo: IDetailsInfo = getDetailsInfo(data);
   const hourlyInfo: IHourlyInfo[] = getHourlyInfo(data);
   const dailyInfo: IDailyInfo[] = getDailyInfo(data);
 
