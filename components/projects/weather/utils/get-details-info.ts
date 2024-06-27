@@ -1,6 +1,7 @@
+import { IDetailsInfo } from "../types/interfeces";
 import { calcWeatherCode } from "./calc-weather-code";
 
-export const getDetailsInfo = (data: any) => {
+export const getDetailsInfo = (data: any): IDetailsInfo | {} => {
   if (data?.current) {
     const {
       apparent_temperature,

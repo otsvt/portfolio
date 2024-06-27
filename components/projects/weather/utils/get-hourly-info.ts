@@ -1,7 +1,8 @@
+import { IHourlyInfo } from "../types/interfeces";
 import { calcWeatherCode } from "./calc-weather-code";
 import { calcWindDirection } from "./calc-wind-direction";
 
-export const getHourlyInfo = (data: any) => {
+export const getHourlyInfo = (data: any): IHourlyInfo[] | [] => {
   if (data?.hourly) {
     const { temperature_2m, time, weather_code, wind_direction_10m, wind_speed_10m } = data.hourly;
 

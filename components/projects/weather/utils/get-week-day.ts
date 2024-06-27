@@ -1,6 +1,6 @@
 import { DATE, DAYS_OF_WEEK } from "../data/dates";
 
-export const getWeekDay = () => {
+export const getWeekDay = (): string[] => {
   const daysOfWeek = [];
 
   for (let i = 1; i <= 5; i++) {

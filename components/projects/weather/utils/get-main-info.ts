@@ -1,6 +1,7 @@
+import { IMainInfo } from "../types/interfeces";
 import { DATE, DAYS_OF_WEEK, MONTHS } from "../data/dates";
 
-export const getMainInfo = (data: any, city?: string) => {
+export const getMainInfo = (data: any, city?: string): IMainInfo | {} => {
   if (data?.current) {
     const [currentDate] = data.current.time.split("T");
     const [currentRegion] = data.timezone.split("/");

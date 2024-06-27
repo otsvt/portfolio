@@ -1,9 +1,10 @@
 import { MONTHS } from "../data/dates";
+import { IDailyInfo } from "../types/interfeces";
 import { calcAverageTemp } from "./calc-average-temp";
 import { calcWeatherCode } from "./calc-weather-code";
 import { getWeekDay } from "./get-week-day";
 
-export const getDailyInfo = (data: any) => {
+export const getDailyInfo = (data: any): IDailyInfo[] | [] => {
   if (data?.daily) {
     const { temperature_2m_min, temperature_2m_max, time, weather_code } = data.daily;
 

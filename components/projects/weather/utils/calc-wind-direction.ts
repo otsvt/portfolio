@@ -1,6 +1,6 @@
 import { WindDirection } from "../types/enums";
 
-export const calcWindDirection = (code: number) => {
+export const calcWindDirection = (code: number): WindDirection => {
   if (code === 0) return WindDirection.North;
   if (code <= 45) return WindDirection.Northeast;
   if (code <= 90) return WindDirection.East;

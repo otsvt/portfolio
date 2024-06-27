@@ -1,6 +1,6 @@
 import { WindDirection } from "../types/enums";
 
-export const rotateWindIcon = (windDirection: string) => {
+export const rotateWindIcon = (windDirection: string): string | undefined => {
   if (windDirection === WindDirection.Northeast) return "rotate-45";
   if (windDirection === WindDirection.East) return "rotate-90";
   if (windDirection === WindDirection.Southeast) return "rotate-[135geg]";
