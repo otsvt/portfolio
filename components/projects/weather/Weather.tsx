@@ -1,3 +1,4 @@
+"use client";
 import React, { FC, PropsWithChildren } from "react";
 import { useTheme } from "./hooks/use-theme";
 import { useWeatherQuery } from "./hooks/use-weather-query";
@@ -13,20 +14,14 @@ import { WeekFrame } from "./layouts/WeekFrame";
 import { HourlyFrame } from "./layouts/HourlyFrame";
 import clsx from "clsx";
 
-interface IWeather {
-  basePath: string | "";
-}
-
-export const Weather: FC<IWeather> = ({ basePath }) => {
+export const Weather: FC<{ basePath: string }> = ({ basePath }) => {
   const { theme, changeTheme } = useTheme();
-  const { data, error, isSuccess, isFetching, inputRef, handleSubmit, getRandomData } = useWeatherQuery();
+  const { data, error, inputRef, isUpdating, handleSubmit, getRandomData } = useWeatherQuery();
 
-  const mainInfo: IMainInfo = getMainInfo(data, inputRef.current?.value);
-  const detailsInfo: IDetailsInfo = getDetailsInfo(data);
+  const mainInfo: Partial<IMainInfo> = getMainInfo(data, inputRef.current?.value);
+  const detailsInfo: Partial<IDetailsInfo> = getDetailsInfo(data);
   const hourlyInfo: IHourlyInfo[] = getHourlyInfo(data);
   const dailyInfo: IDailyInfo[] = getDailyInfo(data);
-
-  console.log(dailyInfo);
 
   return (
     <Wrapper>
@@ -39,22 +34,22 @@ export const Weather: FC<IWeather> = ({ basePath }) => {
         getRandomData={getRandomData}
       />
       <Frames>
-        <MainFrame basePath={basePath} info={mainInfo} isSuccess={isSuccess} isFetching={isFetching} />
-        <DetailsFrame theme={theme} info={detailsInfo} isSuccess={isSuccess} isFetching={isFetching} />
+        <MainFrame basePath={basePath} info={mainInfo} isUpdating={isUpdating} />
+        <DetailsFrame theme={theme} info={detailsInfo} isUpdating={isUpdating} />
       </Frames>
       <Frames>
-        <WeekFrame info={dailyInfo} isSuccess={isSuccess} isFetching={isFetching} />
-        <HourlyFrame info={hourlyInfo} isSuccess={isSuccess} isFetching={isFetching} />
+        <WeekFrame info={dailyInfo} isUpdating={isUpdating} />
+        <HourlyFrame info={hourlyInfo} isUpdating={isUpdating} />
       </Frames>
     </Wrapper>
   );
 };
 
-const Wrapper: FC<PropsWithChildren<unknown>> = ({ children }) => {
+const Wrapper: FC<PropsWithChildren<{}>> = ({ children }) => {
   return (
     <div
       className={clsx(
-        "px-10 py-10 font-poppins",
+        "p-10 font-poppins",
         "min-h-screen *:max-w-7xl *:mx-auto",
         "bg-weatherLight dark:bg-weatherDark transition-colors"
       )}
@@ -64,6 +59,6 @@ const Wrapper: FC<PropsWithChildren<unknown>> = ({ children }) => {
   );
 };
 
-const Frames: FC<PropsWithChildren<unknown>> = ({ children }) => {
-  return <div className="flex justify-between gap-14 first-of-type:mb-10">{children}</div>;
+const Frames: FC<PropsWithChildren<{}>> = ({ children }) => {
+  return <div className="flex justify-between gap-10 first-of-type:mb-10">{children}</div>;
 };

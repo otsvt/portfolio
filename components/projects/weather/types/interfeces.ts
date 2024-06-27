@@ -4,24 +4,23 @@ export interface IIcon {
 
 export interface IMainInfo {
   region: string;
-  city?: string;
+  city: string;
   day: string;
-  number: number;
+  number: string;
   month: string;
-  time: string;
   isDay: boolean;
 }
 
 export interface IDetailsInfo {
-  weather?: string;
-  temp?: string;
-  apparentTemp?: string;
-  pressure?: string;
-  windSpeed?: string;
-  humidity?: string;
-  sunrise?: string;
-  sunset?: string;
-  uv?: string;
+  weather: string;
+  temp: string;
+  apparentTemp: string;
+  pressure: string;
+  windSpeed: string;
+  humidity: string;
+  sunrise: string;
+  sunset: string;
+  uv: string;
 }
 
 export interface IHourlyInfo {

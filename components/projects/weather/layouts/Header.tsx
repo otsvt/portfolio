@@ -1,7 +1,7 @@
 import React, { FC, SyntheticEvent, forwardRef } from "react";
+import { Themes } from "../types/enums";
 import { SearchIcon } from "../icons/Search";
 import { LocationIcon } from "../icons/Location";
-import { Themes } from "../types/enums";
 import clsx from "clsx";
 
 interface IHeader {

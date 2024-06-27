@@ -20,3 +20,12 @@ export enum WindDirection {
   West = "West",
   Northwest = "Northwest",
 }
+
+export enum WindDir {
+  North,
+  Northeast,
+  East,
+  Southeast,
+  South,
+  Southwest,
+}

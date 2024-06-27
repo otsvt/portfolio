@@ -1,6 +1,6 @@
 import { SyntheticEvent, useRef } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { cities } from "../data/cities";
+import { CITIES } from "../data/cities";
 import { getWeather } from "../utils/get-weather";
 
 export const useWeatherQuery = () => {
@@ -19,19 +19,22 @@ export const useWeatherQuery = () => {
     enabled: false,
   });
 
+  const isUpdating = !isSuccess || isFetching;
+
   const handleSubmit = (e: SyntheticEvent) => {
     e.preventDefault();
+    if (inputRef.current?.value.trim() === "") return;
     refetch();
   };
 
   const getRandomData = () => {
-    const randomIdex = Math.floor(Math.random() * cities.length);
+    const randomIdex = Math.floor(Math.random() * CITIES.length);
 
     if (inputRef.current) {
-      inputRef.current.value = cities[randomIdex];
+      inputRef.current.value = CITIES[randomIdex];
       refetch();
     }
   };
 
-  return { data, error, isSuccess, isFetching, inputRef, handleSubmit, getRandomData };
+  return { data, error, isUpdating, inputRef, handleSubmit, getRandomData };
 };

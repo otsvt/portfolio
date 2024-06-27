@@ -1,4 +1,4 @@
-export const cities = [
+export const CITIES = [
   "Berlin",
   "Florence",
   "Cape Town",

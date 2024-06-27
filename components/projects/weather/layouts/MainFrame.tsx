@@ -1,16 +1,15 @@
 import React, { FC } from "react";
-import clsx from "clsx";
 import { IMainInfo } from "../types/interfeces";
 import { capitalizeWords } from "../utils/capitalize-words";
+import clsx from "clsx";
 
 interface IMainFrame {
-  basePath: string | "";
-  info: IMainInfo;
-  isSuccess: boolean;
-  isFetching: boolean;
+  basePath: string;
+  info: Partial<IMainInfo>;
+  isUpdating: boolean;
 }
 
-export const MainFrame: FC<IMainFrame> = ({ basePath, info, isSuccess, isFetching }) => {
+export const MainFrame: FC<IMainFrame> = ({ basePath, info, isUpdating }) => {
   const cityName = info.city ? capitalizeWords(info.city) : "";
 
   return (
@@ -20,10 +19,10 @@ export const MainFrame: FC<IMainFrame> = ({ basePath, info, isSuccess, isFetchin
         "flex flex-col justify-center items-center gap-7",
         "shadow-weatherFrame rounded-[30px]",
         "bg-weatherFrame",
-        info.isDay ? "text-black" : "text-white",
-        "transition-all",
+        "transition-all overflow-hidden",
         "bg-center bg-no-repeat bg-cover",
-        !isSuccess || isFetching ? "blur-sm" : ""
+        info.isDay ? "text-black" : "text-white",
+        isUpdating ? "blur-sm" : ""
       )}
       style={{
         backgroundImage: info.isDay
@@ -31,11 +30,11 @@ export const MainFrame: FC<IMainFrame> = ({ basePath, info, isSuccess, isFetchin
           : `url(${basePath}/images/weather/bg-night.png)`,
       }}
     >
-      <h1 className="text-4xl font-bold">{info.region || "Europe"}</h1>
+      <h1 className="text-2xl xl:text-4xl font-bold truncate">{info.region || "Europe"}</h1>
       <div className="flex flex-col items-center gap-1">
-        <span className="mb-6 text-6xl font-bold text-center">{isFetching ? "" : (isSuccess && cityName) || ""}</span>
-        <span className="text-xl font-semibold">
-          {info.day}, {info.number} {info.month}
+        <span className="mb-6 text-3xl xl:text-6xl font-bold text-center">{isUpdating ? "" : cityName}</span>
+        <span className="text-lg xl:text-xl font-semibold">
+          {info.day && info.day + ","} {info.number} {info.month}
         </span>
       </div>
     </div>
