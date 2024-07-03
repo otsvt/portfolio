@@ -38,6 +38,7 @@ module.exports = {
         romance: ["var(--font-romance)"],
         wolfpack: ["var(--font-wolfpack)"],
         poppins: ["var(--font-poppins)"],
+        ubuntu: ["var(--font-ubuntu)"],
       },
       colors: {
         portfolio: "#f4efec",
@@ -59,6 +60,7 @@ module.exports = {
         infoInner:
           "5px 5px 5px 3px rgba(0, 0, 0, 0.2), inset 2px 2px 4px 3px rgba(0, 0, 0, 0.2), inset 2px 6px 6px 7px rgba(0, 0, 0, 0.12), inset 5px 4px 6px 3px rgba(0, 0, 0, 0.14)",
         weatherFrame: "10px 10px 4px 0px rgba(0, 0, 0, 0.5)",
+        commonCard: "15px 30px 40px 20px rgba(0,0,0,0.30), 12px 10px 15px rgba(0,0,0,0.22)",
       },
       borderColor: {
         options: "rgba(255, 255, 255, 0.12)",
@@ -71,11 +73,47 @@ module.exports = {
       },
       animation: {
         error: "forError 1s ease 4s forwards",
+        commonCard: "commonShadow 5s linear infinite",
+        rareCard: "rareShadow 5s linear infinite",
+        epicCard: "epicShadow 5s linear infinite",
+        legendCard: "legendShadow 5s linear infinite",
       },
       keyframes: {
         forError: {
           "0%": { opacity: 1, top: "-28px" },
           "100%": { opacity: 0, top: "-14px" },
+        },
+        commonShadow: {
+          "0%, 100%": {
+            boxShadow: "-1px -1px 10px 5px rgba(0,0,0,0.2)",
+          },
+          "50%": {
+            boxShadow: "5px 10px 20px 10px rgba(0,0,0,0.5)",
+          },
+        },
+        rareShadow: {
+          "0%, 100%": {
+            boxShadow: "-1px -1px 10px 5px rgba(75,127,173,0.5)",
+          },
+          "50%": {
+            boxShadow: "5px 10px 20px 10px rgba(75,147,173,0.8)",
+          },
+        },
+        epicShadow: {
+          "0%, 100%": {
+            boxShadow: "-1px -1px 10px 5px rgba(140,75,156,0.4)",
+          },
+          "50%": {
+            boxShadow: "5px 10px 20px 10px rgba(140,75,156,0.8)",
+          },
+        },
+        legendShadow: {
+          "0%, 100%": {
+            boxShadow: "-1px -1px 10px 5px rgba(237,165,40,0.2)",
+          },
+          "50%": {
+            boxShadow: "5px 10px 20px 10px rgba(237,165,40,0.6)",
+          },
         },
       },
     },

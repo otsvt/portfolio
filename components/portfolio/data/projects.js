@@ -23,10 +23,12 @@ export const projectsLeft = [
   { img: ticTacToe, hasAdapt: false, icons: [reactIcon, tailwindIcon], link: "/tic-tac-toe" },
   { img: safety, hasAdapt: true, icons: [htmlIcon, sassIcon, jsIcon, gsapIcon], link: "/safety" },
   { img: burgers, hasAdapt: false, icons: [reactIcon, sassIcon], link: "/burgers" },
+  { img: gallery, hasAdapt: false, icons: [tsIcon, reactIcon, reduxIcon, tailwindIcon], link: "/" },
 ];
 
 export const projectsRight = [
   { img: gallery, hasAdapt: true, icons: [htmlIcon, sassIcon, jsIcon], link: "/gallery" },
   { img: weather, hasAdapt: false, icons: [tsIcon, reactIcon, tanstackIcon, tailwindIcon], link: "/weather" },
   { img: dailyProphet, hasAdapt: false, icons: [htmlIcon, sassIcon], link: "/daily-prophet" },
+  { img: shop, hasAdapt: false, icons: [tsIcon, reactIcon, reduxIcon, tailwindIcon], link: "/card-collection" },
 ];

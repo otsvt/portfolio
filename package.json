@@ -11,12 +11,14 @@
   "dependencies": {
     "@tanstack/react-query": "^5.45.1",
     "@tanstack/react-query-devtools": "^5.45.1",
+    "@types/react-transition-group": "^4.4.10",
     "axios": "^1.7.2",
     "clsx": "^1.1.0",
     "gsap": "^3.12.5",
-    "next": "14.2.3",
+    "next": "^14.2.4",
     "react": "^18",
     "react-dom": "^18",
+    "react-transition-group": "^4.4.5",
     "sass": "^1.77.4",
     "sharp": "^0.33.4",
     "swiper": "^11.1.4"

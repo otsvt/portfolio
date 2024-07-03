@@ -1,0 +1,16 @@
+.swiper {
+  height: 100%;
+  width: 100%;
+  overflow: visible !important;
+}
+
+.slide {
+  height: 300px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .swiper-button-prev {
+    position: absolute !important;
+  }
+}
