@@ -6,7 +6,7 @@ import { Pages } from "../types/enums";
 import { ButtonBack } from "../uikit/ButtonBack";
 import "swiper/css";
 import "swiper/css/grid";
-import styles from "../styles/swiper.module.scss";
+import styles from "../styles/swiper-collection.module.scss";
 import clsx from "clsx";
 
 export const Collection: FC<{ changePage: (page: Pages) => void }> = ({ changePage }) => {
@@ -76,127 +76,6 @@ export const Collection: FC<{ changePage: (page: Pages) => void }> = ({ changePa
               "h-[300px] w-[220px] p-2",
               "bg-[#434A4F]",
               "rounded-xl animate-legendCard",
-              "cursor-pointer",
-              "hover:scale-110 transition-transform"
-            )}
-          >
-            <div className={clsx("w-full, h-full p-2", "bg-[#D9DBD7]", "rounded-xl")}>
-              <div className={clsx("w-full h-full", "bg-fuchsia-300", "rounded-xl")}></div>
-            </div>
-          </article>
-        </SwiperSlide>
-        <SwiperSlide className={styles.slide}>
-          <article
-            className={clsx(
-              "h-[300px] w-[220px] p-2",
-              "bg-[#434A4F]",
-              "rounded-xl animate-rareCard",
-              "cursor-pointer",
-              "hover:scale-110 transition-transform"
-            )}
-          >
-            <div className={clsx("w-full, h-full p-2", "bg-[#D9DBD7]", "rounded-xl")}>
-              <div className={clsx("w-full h-full", "bg-fuchsia-300", "rounded-xl")}></div>
-            </div>
-          </article>
-        </SwiperSlide>
-        <SwiperSlide className={styles.slide}>
-          <article
-            className={clsx(
-              "h-[300px] w-[220px] p-2",
-              "bg-[#434A4F]",
-              "rounded-xl animate-rareCard",
-              "cursor-pointer",
-              "hover:scale-110 transition-transform"
-            )}
-          >
-            <div className={clsx("w-full, h-full p-2", "bg-[#D9DBD7]", "rounded-xl")}>
-              <div className={clsx("w-full h-full", "bg-fuchsia-300", "rounded-xl")}></div>
-            </div>
-          </article>
-        </SwiperSlide>
-        <SwiperSlide className={styles.slide}>
-          {" "}
-          <article
-            className={clsx(
-              "h-[300px] w-[220px] p-2",
-              "bg-[#434A4F]",
-              "rounded-xl animate-rareCard",
-              "cursor-pointer",
-              "hover:scale-110 transition-transform"
-            )}
-          >
-            <div className={clsx("w-full, h-full p-2", "bg-[#D9DBD7]", "rounded-xl")}>
-              <div className={clsx("w-full h-full", "bg-fuchsia-300", "rounded-xl")}></div>
-            </div>
-          </article>
-        </SwiperSlide>
-        <SwiperSlide className={styles.slide}>
-          <article
-            className={clsx(
-              "h-[300px] w-[220px] p-2",
-              "bg-[#434A4F]",
-              "rounded-xl animate-rareCard",
-              "cursor-pointer",
-              "hover:scale-110 transition-transform"
-            )}
-          >
-            <div className={clsx("w-full, h-full p-2", "bg-[#D9DBD7]", "rounded-xl")}>
-              <div className={clsx("w-full h-full", "bg-fuchsia-300", "rounded-xl")}></div>
-            </div>
-          </article>
-        </SwiperSlide>
-        <SwiperSlide className={styles.slide}>
-          <article
-            className={clsx(
-              "h-[300px] w-[220px] p-2",
-              "bg-[#434A4F]",
-              "rounded-xl animate-rareCard",
-              "cursor-pointer",
-              "hover:scale-110 transition-transform"
-            )}
-          >
-            <div className={clsx("w-full, h-full p-2", "bg-[#D9DBD7]", "rounded-xl")}>
-              <div className={clsx("w-full h-full", "bg-fuchsia-300", "rounded-xl")}></div>
-            </div>
-          </article>
-        </SwiperSlide>
-        <SwiperSlide className={styles.slide}>
-          <article
-            className={clsx(
-              "h-[300px] w-[220px] p-2",
-              "bg-[#434A4F]",
-              "rounded-xl animate-rareCard",
-              "cursor-pointer",
-              "hover:scale-110 transition-transform"
-            )}
-          >
-            <div className={clsx("w-full, h-full p-2", "bg-[#D9DBD7]", "rounded-xl")}>
-              <div className={clsx("w-full h-full", "bg-fuchsia-300", "rounded-xl")}></div>
-            </div>
-          </article>
-        </SwiperSlide>
-        <SwiperSlide className={styles.slide}>
-          <article
-            className={clsx(
-              "h-[300px] w-[220px] p-2",
-              "bg-[#434A4F]",
-              "rounded-xl animate-rareCard",
-              "cursor-pointer",
-              "hover:scale-110 transition-transform"
-            )}
-          >
-            <div className={clsx("w-full, h-full p-2", "bg-[#D9DBD7]", "rounded-xl")}>
-              <div className={clsx("w-full h-full", "bg-fuchsia-300", "rounded-xl")}></div>
-            </div>
-          </article>
-        </SwiperSlide>
-        <SwiperSlide className={styles.slide}>
-          <article
-            className={clsx(
-              "h-[300px] w-[220px] p-2",
-              "bg-[#434A4F]",
-              "rounded-xl animate-rareCard",
               "cursor-pointer",
               "hover:scale-110 transition-transform"
             )}

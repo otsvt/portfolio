@@ -3,3 +3,11 @@ export enum Pages {
   Store = "Store",
   Collection = "Collection",
 }
+
+export enum Decks {
+  Orcs,
+  Goblins,
+  Humans,
+  Elves,
+  Monsters,
+}

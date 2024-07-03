@@ -60,7 +60,6 @@ module.exports = {
         infoInner:
           "5px 5px 5px 3px rgba(0, 0, 0, 0.2), inset 2px 2px 4px 3px rgba(0, 0, 0, 0.2), inset 2px 6px 6px 7px rgba(0, 0, 0, 0.12), inset 5px 4px 6px 3px rgba(0, 0, 0, 0.14)",
         weatherFrame: "10px 10px 4px 0px rgba(0, 0, 0, 0.5)",
-        commonCard: "15px 30px 40px 20px rgba(0,0,0,0.30), 12px 10px 15px rgba(0,0,0,0.22)",
       },
       borderColor: {
         options: "rgba(255, 255, 255, 0.12)",
@@ -77,6 +76,7 @@ module.exports = {
         rareCard: "rareShadow 5s linear infinite",
         epicCard: "epicShadow 5s linear infinite",
         legendCard: "legendShadow 5s linear infinite",
+        deck: "deckShadow 5s linear infinite",
       },
       keyframes: {
         forError: {
@@ -113,6 +113,14 @@ module.exports = {
           },
           "50%": {
             boxShadow: "5px 10px 20px 10px rgba(237,165,40,0.6)",
+          },
+        },
+        deckShadow: {
+          "0%, 100%": {
+            boxShadow: "0px 0px 105px 50px rgba(0,0,0,0.63), 0px 0px 75px 0px rgba(235,107,38,0.4)",
+          },
+          "50%": {
+            boxShadow: "0px 0px 105px 50px rgba(0,0,0,0.63), 0px 0px 75px -30px rgba(235,107,38,0.9)",
           },
         },
       },

@@ -18,7 +18,7 @@ export const CardCollection: FC<{ basePath: string }> = ({ basePath }) => {
         <CSSTransition key={currentPage} timeout={300} classNames="page-transition">
           <>
             {currentPage === Pages.Menu && <Menu changePage={changePage} />}
-            {currentPage === Pages.Store && <Store changePage={changePage} />}
+            {currentPage === Pages.Store && <Store basePath={basePath} changePage={changePage} />}
             {currentPage === Pages.Collection && <Collection changePage={changePage} />}
           </>
         </CSSTransition>
