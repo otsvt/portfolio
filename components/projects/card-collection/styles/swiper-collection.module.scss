@@ -2,6 +2,7 @@
   height: 100%;
   width: 100%;
   overflow: visible !important;
+  will-change: transform !important;
 }
 
 .slide {
@@ -9,6 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  will-change: transform !important;
 
   .swiper-button-prev {
     position: absolute !important;

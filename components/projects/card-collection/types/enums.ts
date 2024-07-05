@@ -11,3 +11,10 @@ export enum Decks {
   Elves,
   Monsters,
 }
+
+export enum Rarities {
+  Common = "Common",
+  Rare = "Rare",
+  Epic = "Epic",
+  Legend = "Legend",
+}

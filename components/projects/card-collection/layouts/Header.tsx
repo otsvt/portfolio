@@ -11,7 +11,7 @@ export const Header: FC<{ basePath: string; title: string }> = ({ basePath, titl
         "shadow-2xl",
         "border-b-4 border-black/70",
         "overflow-hidden rounded-b-2xl",
-        "before:absolute before:inset-0 before:bg-orange-900/60"
+        "before:absolute before:inset-0 before:bg-[#39060699]"
       )}
       style={{ backgroundImage: `url(${basePath}/images/card-collection/bg.png)` }}
     >

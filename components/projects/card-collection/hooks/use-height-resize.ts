@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const useHeightResize = (): number => {
+export const useHeightResize = (): boolean => {
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
 
   useEffect(() => {
@@ -13,5 +13,5 @@ export const useHeightResize = (): number => {
     };
   }, []);
 
-  return windowHeight < 880 ? 1 : 2;
+  return windowHeight < 880 ? false : true;
 };

@@ -2,6 +2,12 @@
   height: 550px;
   width: 400px;
   overflow: visible !important;
+  will-change: transform !important;
+
+  @media (max-height: 880px) {
+    width: 300px;
+    height: 440px;
+  }
 }
 
 .slide {
@@ -9,4 +15,5 @@
   align-items: center;
   justify-content: center;
   overflow: visible !important;
+  will-change: transform !important;
 }

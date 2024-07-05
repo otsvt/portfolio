@@ -1,7 +1,9 @@
 import React, { FC, PropsWithChildren } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import { usePages } from "./hooks/use-pages";
+import { Provider } from "react-redux";
 import { Pages } from "./types/enums";
+import { usePages } from "./hooks/use-pages";
+import { store } from "./store/store";
 import { Header } from "./layouts/Header";
 import { Menu } from "./layouts/Menu";
 import { Store } from "./layouts/Store";
@@ -12,18 +14,20 @@ export const CardCollection: FC<{ basePath: string }> = ({ basePath }) => {
   const { currentPage, changePage } = usePages();
 
   return (
-    <Wrapper basePath={basePath}>
-      <Header title={currentPage} basePath={basePath} />
-      <TransitionGroup component={Main}>
-        <CSSTransition key={currentPage} timeout={300} classNames="page-transition">
-          <>
-            {currentPage === Pages.Menu && <Menu changePage={changePage} />}
-            {currentPage === Pages.Store && <Store basePath={basePath} changePage={changePage} />}
-            {currentPage === Pages.Collection && <Collection changePage={changePage} />}
-          </>
-        </CSSTransition>
-      </TransitionGroup>
-    </Wrapper>
+    <Provider store={store}>
+      <Wrapper basePath={basePath}>
+        <Header title={currentPage} basePath={basePath} />
+        <TransitionGroup component={Main}>
+          <CSSTransition key={currentPage} timeout={300} classNames="page-transition">
+            <>
+              {currentPage === Pages.Menu && <Menu changePage={changePage} />}
+              {currentPage === Pages.Store && <Store changePage={changePage} />}
+              {currentPage === Pages.Collection && <Collection changePage={changePage} />}
+            </>
+          </CSSTransition>
+        </TransitionGroup>
+      </Wrapper>
+    </Provider>
   );
 };
 

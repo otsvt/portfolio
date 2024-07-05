@@ -60,6 +60,7 @@ module.exports = {
         infoInner:
           "5px 5px 5px 3px rgba(0, 0, 0, 0.2), inset 2px 2px 4px 3px rgba(0, 0, 0, 0.2), inset 2px 6px 6px 7px rgba(0, 0, 0, 0.12), inset 5px 4px 6px 3px rgba(0, 0, 0, 0.14)",
         weatherFrame: "10px 10px 4px 0px rgba(0, 0, 0, 0.5)",
+        collectionCard: "1px -2px 55px 19px rgba(0,0,0,0.75)",
       },
       borderColor: {
         options: "rgba(255, 255, 255, 0.12)",
@@ -117,10 +118,10 @@ module.exports = {
         },
         deckShadow: {
           "0%, 100%": {
-            boxShadow: "0px 0px 105px 50px rgba(0,0,0,0.63), 0px 0px 75px 0px rgba(235,107,38,0.4)",
+            boxShadow: "0px 0px 105px 50px rgba(0,0,0,0.3), 0px 0px 75px 0px rgba(235,107,38,0.2)",
           },
           "50%": {
-            boxShadow: "0px 0px 105px 50px rgba(0,0,0,0.63), 0px 0px 75px -30px rgba(235,107,38,0.9)",
+            boxShadow: "0px 0px 105px 50px rgba(0,0,0,0.3), 0px 0px 75px -30px rgba(235,107,38,0.7)",
           },
         },
       },

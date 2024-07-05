@@ -1,12 +1,17 @@
 import Image from "next/image";
 import React, { FC } from "react";
-import avatar from "../images/avatar.jpg";
+import { useSelector } from "react-redux";
+import type { RootState } from "../store/store";
 import { LevelIcon } from "../icons/LevelIcon";
 import { CoinIcon } from "../icons/CoinIcon";
 import { DustIcon } from "../icons/DustIcon";
+import avatar from "../images/avatar.jpg";
 import clsx from "clsx";
 
 export const Profile: FC = () => {
+  const coins = useSelector((state: RootState) => state.collection.coins);
+  const dust = useSelector((state: RootState) => state.collection.dust);
+
   return (
     <div className="flex items-center gap-4">
       <div className="grid gap-1">
@@ -15,11 +20,11 @@ export const Profile: FC = () => {
             "px-3",
             "flex justify-between items-center gap-2",
             "border-2 border-black/80",
-            "rounded-3xl shadow-forWindow",
+            "rounded-2xl shadow-forWindow",
             "bg-[#C3B189]"
           )}
         >
-          <span className="font-bold text-xl w-14 text-black">0</span>
+          <span className="font-bold text-xl w-14 text-black">{coins}</span>
           <CoinIcon className="w-5 h-5" />
         </div>
         <div
@@ -27,11 +32,11 @@ export const Profile: FC = () => {
             "px-3",
             "flex justify-between items-center gap-2",
             "border-2 border-black/80",
-            "rounded-3xl shadow-forWindow",
+            "rounded-2xl shadow-forWindow",
             "bg-[#C3B189]"
           )}
         >
-          <span className="font-bold text-xl w-14 text-black">0</span>
+          <span className="font-bold text-xl w-14 text-black">{dust}</span>
           <DustIcon className="w-5 h-5" />
         </div>
       </div>

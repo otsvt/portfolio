@@ -1,0 +1,123 @@
+import { Rarities } from "../types/enums";
+import { ICard } from "../types/interfaces";
+
+export const elvesPack: ICard[] = [
+  {
+    rarity: Rarities.Common,
+    title: "Elven Ranger",
+    description:
+      "The elven ranger strikes swiftly with bow and arrow, shooting enemies from afar with unmatched precision.",
+    hp: 1,
+    damage: 2,
+    sprayCost: 40,
+    image: "url(./images/card-collection/elves/elf-1.jpg)",
+    pack: "Elves pack",
+    amount: 1,
+  },
+  {
+    rarity: Rarities.Common,
+    title: "Forest Druid",
+    description:
+      "The forest druid communes with nature, calling upon the spirits of the forest to aid allies and hinder foes.",
+    hp: 2,
+    damage: 3,
+    sprayCost: 40,
+    image: "url(./images/card-collection/elves/elf-2.jpg)",
+    pack: "Elves pack",
+    amount: 1,
+  },
+  {
+    rarity: Rarities.Common,
+    title: "Elven Sorceress",
+    description:
+      "The elven sorceress manipulates the elements, conjuring storms and unleashing lightning bolts upon enemies.",
+    hp: 3,
+    damage: 4,
+    sprayCost: 40,
+    image: "url(./images/card-collection/elves/elf-3.jpg)",
+    pack: "Elves pack",
+    amount: 1,
+  },
+  {
+    rarity: Rarities.Common,
+    title: "Noble Warrior",
+    description:
+      "The noble elven warrior wields a blade infused with ancient magic, striking enemies with graceful precision.",
+    hp: 4,
+    damage: 5,
+    sprayCost: 40,
+    image: "url(./images/card-collection/elves/elf-4.jpg)",
+    pack: "Elves pack",
+    amount: 1,
+  },
+  {
+    rarity: Rarities.Rare,
+    title: "Moonlit Sentinel",
+    description:
+      "The moonlit sentinel guards elven realms with mystical powers, detecting and neutralizing threats swiftly.",
+    hp: 1,
+    damage: 2,
+    sprayCost: 60,
+    image: "url(./images/card-collection/elves/elf-5.jpg)",
+    pack: "Elves pack",
+    amount: 1,
+  },
+  {
+    rarity: Rarities.Rare,
+    title: "Starlight Enchantress",
+    description: "The starlight enchantress weaves cosmic spells, entrancing enemies and bending reality to her will.",
+    hp: 2,
+    damage: 3,
+    sprayCost: 60,
+    image: "url(./images/card-collection/elves/elf-6.jpg)",
+    pack: "Elves pack",
+    amount: 1,
+  },
+  {
+    rarity: Rarities.Rare,
+    title: "Ancient Guardian",
+    description:
+      "The ancient guardian protects elven lands with age-old wisdom, striking down intruders with swift justice.",
+    hp: 3,
+    damage: 4,
+    sprayCost: 60,
+    image: "url(./images/card-collection/elves/elf-7.jpg)",
+    pack: "Elves pack",
+    amount: 1,
+  },
+  {
+    rarity: Rarities.Epic,
+    title: "Eternal Archmage",
+    description:
+      "The eternal archmage channels ancient magic, casting spells that reshape reality and transcend time itself.",
+    hp: 9,
+    damage: 7,
+    sprayCost: 80,
+    image: "url(./images/card-collection/elves/elf-8.jpg)",
+    pack: "Elves pack",
+    amount: 1,
+  },
+  {
+    rarity: Rarities.Epic,
+    title: "Silverwind Assassin",
+    description: "The silverwind assassin strikes swiftly from shadows, executing precise strikes that leave no trace.",
+    hp: 4,
+    damage: 20,
+    sprayCost: 80,
+    image: "url(./images/card-collection/elves/elf-9.jpg)",
+    pack: "Elves pack",
+    amount: 1,
+  },
+  {
+    rarity: Rarities.Legend,
+    title: "Celestial Avatar",
+    description:
+      "The celestial avatar embodies the harmony of nature and magic, wielding cosmic powers that defy mortal comprehension.",
+    hp: 12,
+    damage: 14,
+    sprayCost: 100,
+    image: "url(./images/card-collection/elves/elf-10.jpg)",
+    pack: "Elves pack",
+    amount: 1,
+  },
+];
