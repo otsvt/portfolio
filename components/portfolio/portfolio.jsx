@@ -7,6 +7,7 @@ import { Preloader } from "./layouts/preloader";
 import { Codepen } from "./layouts/codepen";
 import { GalleryItem } from "./layouts/gallery-item";
 import { Title } from "./layouts/title";
+import { ContactsItem } from "./layouts/contacts.jsx";
 import { Decore } from "./layouts/decore";
 import styles from "./styles/style.module.scss";
 import clsx from "clsx";
@@ -35,6 +36,7 @@ export const Portfolio = ({ basePath }) => {
                   {projectsLeft.map((proj, i) => {
                     return <GalleryItem key={i} proj={proj} ref={(el) => (iconsLeftRef.current[i] = el)} />;
                   })}
+                  <ContactsItem />
                 </div>
                 <div className={styles.galleryWrapper} data-speed="1.1">
                   {projectsRight.map((proj, i) => {

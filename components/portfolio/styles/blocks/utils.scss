@@ -39,3 +39,26 @@
     gap: 30px;
   }
 }
+
+.contactsItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 30vw;
+  height: clamp(11.25rem, 3.333rem + 35.19vw, 40rem);
+
+  @media (min-width: 2100px) {
+    height: 50rem;
+  }
+
+  @media (max-width: 768px) {
+    max-width: unset;
+    height: clamp(15.625rem, -5.208rem + 69.44vw, 28.125rem);
+  }
+
+  @media (max-width: 480px) {
+    height: 250px;
+  }
+}

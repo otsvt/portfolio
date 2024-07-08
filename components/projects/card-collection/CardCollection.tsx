@@ -1,3 +1,4 @@
+"use client";
 import React, { FC, PropsWithChildren } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { Provider } from "react-redux";

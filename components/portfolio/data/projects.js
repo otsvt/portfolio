@@ -11,7 +11,7 @@ import gulpIcon from "../images/icons/gulp.svg";
 import jsIcon from "../images/icons/js.svg";
 import gsapIcon from "../images/icons/gsap.svg";
 import gitIcon from "../images/icons/git.svg";
-import gitHubIcon from "../images/icons/github.svg";
+import gitHubIcon from "../images/icons/github-icon.jsx";
 import reduxIcon from "../images/icons/redux.svg";
 import tanstackIcon from "../images/icons/reactquery.svg";
 import reactIcon from "../images/icons/reactjs.svg";
@@ -23,7 +23,6 @@ export const projectsLeft = [
   { img: weather, hasAdapt: false, icons: [tsIcon, reactIcon, tanstackIcon, tailwindIcon], link: "/weather" },
   { img: gallery, hasAdapt: true, icons: [htmlIcon, sassIcon, jsIcon], link: "/gallery" },
   { img: burgers, hasAdapt: false, icons: [reactIcon, sassIcon], link: "/burgers" },
-  { img: gallery, hasAdapt: false, icons: [tsIcon, reactIcon, reduxIcon, tailwindIcon], link: "/" },
 ];
 
 export const projectsRight = [
