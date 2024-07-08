@@ -1,6 +1,7 @@
 import React, { FC } from "react";
+import { IIcon } from "../types/interfaces";
 
-export const DustIcon: FC<{ className?: string }> = ({ className }) => {
+export const DustIcon: FC<IIcon> = ({ className }) => {
   return (
     <svg className={className} viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0_13_1976)">

@@ -1,6 +1,7 @@
 import React, { FC } from "react";
+import { IIcon } from "../types/interfaces";
 
-export const BuyIcon: FC<{ className?: string }> = ({ className }) => {
+export const BuyIcon: FC<IIcon> = ({ className }) => {
   return (
     <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 82">
       <path d="M220.69,56.17H79.31l-.15-.8c0-.2-1-4.82-5.18-6.09l-.7-.2V28.56l.7-.2c4.26-1.28,5.17-6,5.18-6.09l.15-.8H220.69l.15.8c0,.2.95,4.81,5.18,6.09l.7.2V49.08l-.7.2c-4.26,1.28-5.17,6-5.18,6.08Zm-139.81-2H219.12a10,10,0,0,1,5.64-6.56V30a10,10,0,0,1-5.64-6.56H80.88A10,10,0,0,1,75.24,30V47.65A10,10,0,0,1,80.88,54.21Z"></path>

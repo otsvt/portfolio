@@ -2,6 +2,7 @@ import Image from "next/image";
 import React, { FC } from "react";
 import { useSelector } from "react-redux";
 import type { RootState } from "../store/store";
+import { ButtonConversion } from "./ButtonConversion";
 import { LevelIcon } from "../icons/LevelIcon";
 import { CoinIcon } from "../icons/CoinIcon";
 import { DustIcon } from "../icons/DustIcon";
@@ -12,8 +13,11 @@ export const Profile: FC = () => {
   const coins = useSelector((state: RootState) => state.collection.coins);
   const dust = useSelector((state: RootState) => state.collection.dust);
 
+  const isConversionAvailable = dust > 0;
+
   return (
     <div className="flex items-center gap-4">
+      {isConversionAvailable && <ButtonConversion />}
       <div className="grid gap-1">
         <div
           className={clsx(

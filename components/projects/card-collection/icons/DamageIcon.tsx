@@ -1,6 +1,7 @@
 import React, { FC } from "react";
+import { IIcon } from "../types/interfaces";
 
-export const DamageIcon: FC<{ className?: string }> = ({ className }) => {
+export const DamageIcon: FC<IIcon> = ({ className }) => {
   return (
     <svg className={className} viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
       <path

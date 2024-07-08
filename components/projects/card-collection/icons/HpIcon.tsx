@@ -1,6 +1,7 @@
 import React, { FC } from "react";
+import { IIcon } from "../types/interfaces";
 
-export const HpIcon: FC<{ className?: string }> = ({ className }) => {
+export const HpIcon: FC<IIcon> = ({ className }) => {
   return (
     <svg className={className} viewBox="0 0 34 35" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
       <path

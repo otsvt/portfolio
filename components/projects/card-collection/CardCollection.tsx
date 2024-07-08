@@ -1,9 +1,9 @@
 import React, { FC, PropsWithChildren } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { Provider } from "react-redux";
+import { store } from "./store/store";
 import { Pages } from "./types/enums";
 import { usePages } from "./hooks/use-pages";
-import { store } from "./store/store";
 import { Header } from "./layouts/Header";
 import { Menu } from "./layouts/Menu";
 import { Store } from "./layouts/Store";
@@ -11,7 +11,7 @@ import { Collection } from "./layouts/Collection";
 import clsx from "clsx";
 
 export const CardCollection: FC<{ basePath: string }> = ({ basePath }) => {
-  const { currentPage, changePage } = usePages();
+  const [currentPage, changePage] = usePages();
 
   return (
     <Provider store={store}>

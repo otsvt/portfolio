@@ -3,7 +3,7 @@ import burgers from "../images/works/burgers.png";
 import dailyProphet from "../images/works/daily-prophet.png";
 import gallery from "../images/works/gallery.png";
 import safety from "../images/works/safety.png";
-import shop from "../images/works/shop.png";
+import cardCollection from "../images/works/card-collection.png";
 import weather from "../images/works/weather.png";
 import htmlIcon from "../images/icons/html5.svg";
 import sassIcon from "../images/icons/sass.svg";
@@ -20,15 +20,20 @@ import nextIcon from "../images/icons/nextjs.svg";
 import tailwindIcon from "../images/icons/tailwindcss.svg";
 
 export const projectsLeft = [
-  { img: ticTacToe, hasAdapt: false, icons: [reactIcon, tailwindIcon], link: "/tic-tac-toe" },
-  { img: safety, hasAdapt: true, icons: [htmlIcon, sassIcon, jsIcon, gsapIcon], link: "/safety" },
+  { img: weather, hasAdapt: false, icons: [tsIcon, reactIcon, tanstackIcon, tailwindIcon], link: "/weather" },
+  { img: gallery, hasAdapt: true, icons: [htmlIcon, sassIcon, jsIcon], link: "/gallery" },
   { img: burgers, hasAdapt: false, icons: [reactIcon, sassIcon], link: "/burgers" },
   { img: gallery, hasAdapt: false, icons: [tsIcon, reactIcon, reduxIcon, tailwindIcon], link: "/" },
 ];
 
 export const projectsRight = [
-  { img: gallery, hasAdapt: true, icons: [htmlIcon, sassIcon, jsIcon], link: "/gallery" },
-  { img: weather, hasAdapt: false, icons: [tsIcon, reactIcon, tanstackIcon, tailwindIcon], link: "/weather" },
+  { img: ticTacToe, hasAdapt: false, icons: [reactIcon, tailwindIcon], link: "/tic-tac-toe" },
+  {
+    img: cardCollection,
+    hasAdapt: false,
+    icons: [tsIcon, reactIcon, reduxIcon, tailwindIcon],
+    link: "/card-collection",
+  },
+  { img: safety, hasAdapt: true, icons: [htmlIcon, sassIcon, jsIcon, gsapIcon], link: "/safety" },
   { img: dailyProphet, hasAdapt: false, icons: [htmlIcon, sassIcon], link: "/daily-prophet" },
-  { img: shop, hasAdapt: false, icons: [tsIcon, reactIcon, reduxIcon, tailwindIcon], link: "/card-collection" },
 ];

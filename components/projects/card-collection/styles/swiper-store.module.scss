@@ -3,6 +3,7 @@
   width: 400px;
   overflow: visible !important;
   will-change: transform !important;
+  align-self: center;
 
   @media (max-height: 880px) {
     width: 300px;

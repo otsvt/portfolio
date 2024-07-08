@@ -7,7 +7,7 @@ export const elvesPack: ICard[] = [
     title: "Elven Ranger",
     description:
       "The elven ranger strikes swiftly with bow and arrow, shooting enemies from afar with unmatched precision.",
-    hp: 1,
+    hp: 2,
     damage: 2,
     sprayCost: 40,
     image: "url(./images/card-collection/elves/elf-1.jpg)",
@@ -55,8 +55,8 @@ export const elvesPack: ICard[] = [
     title: "Moonlit Sentinel",
     description:
       "The moonlit sentinel guards elven realms with mystical powers, detecting and neutralizing threats swiftly.",
-    hp: 1,
-    damage: 2,
+    hp: 5,
+    damage: 3,
     sprayCost: 60,
     image: "url(./images/card-collection/elves/elf-5.jpg)",
     pack: "Elves pack",
@@ -64,10 +64,10 @@ export const elvesPack: ICard[] = [
   },
   {
     rarity: Rarities.Rare,
-    title: "Starlight Enchantress",
+    title: "Enchantress",
     description: "The starlight enchantress weaves cosmic spells, entrancing enemies and bending reality to her will.",
     hp: 2,
-    damage: 3,
+    damage: 4,
     sprayCost: 60,
     image: "url(./images/card-collection/elves/elf-6.jpg)",
     pack: "Elves pack",
@@ -78,7 +78,7 @@ export const elvesPack: ICard[] = [
     title: "Ancient Guardian",
     description:
       "The ancient guardian protects elven lands with age-old wisdom, striking down intruders with swift justice.",
-    hp: 3,
+    hp: 8,
     damage: 4,
     sprayCost: 60,
     image: "url(./images/card-collection/elves/elf-7.jpg)",
@@ -99,7 +99,7 @@ export const elvesPack: ICard[] = [
   },
   {
     rarity: Rarities.Epic,
-    title: "Silverwind Assassin",
+    title: "Silver Assassin",
     description: "The silverwind assassin strikes swiftly from shadows, executing precise strikes that leave no trace.",
     hp: 4,
     damage: 20,

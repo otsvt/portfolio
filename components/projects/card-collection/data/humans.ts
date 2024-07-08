@@ -6,8 +6,8 @@ export const humansPack: ICard[] = [
     rarity: Rarities.Common,
     title: "Valiant Defender",
     description: "This valiant defender wields a mighty sword and shield, protecting allies with courage and honor.",
-    hp: 1,
-    damage: 2,
+    hp: 3,
+    damage: 1,
     sprayCost: 40,
     image: "url(./images/card-collection/humans/human-1.jpg)",
     pack: "Humans pack",
@@ -73,7 +73,7 @@ export const humansPack: ICard[] = [
   },
   {
     rarity: Rarities.Rare,
-    title: "Tactical Commander",
+    title: "Commander",
     description:
       "The tactical commander leads with strategic brilliance, turning the tide of battle with cunning maneuvers.",
     hp: 3,

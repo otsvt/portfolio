@@ -1,19 +1,33 @@
-import clsx from "clsx";
 import React, { FC } from "react";
+import { useDispatch } from "react-redux";
+import { deleteCard } from "../store/reducer";
+import { Rarities } from "../types/enums";
+import { ICard } from "../types/interfaces";
 import { HpIcon } from "../icons/HpIcon";
 import { DamageIcon } from "../icons/DamageIcon";
 import { SprayIcon } from "../icons/SprayIcon";
 import { DustIcon } from "../icons/DustIcon";
-import { ICard } from "../types/interfaces";
-import { Rarities } from "../types/enums";
+import clsx from "clsx";
 
-export const Modal: FC<{ isOpen: boolean; onClose: () => void; card?: ICard }> = ({ isOpen, onClose, card }) => {
+interface IModal {
+  isOpen: boolean;
+  card: ICard | null;
+  onClose: () => void;
+}
+
+export const Modal: FC<IModal> = ({ isOpen, card, onClose }) => {
+  const dispatch = useDispatch();
+
   if (!isOpen) return null;
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     const target = e.target as HTMLElement;
-
     if (!target.closest("[data-id=modal]")) onClose();
+  };
+
+  const sprayCard = (cost: number, title: string) => {
+    dispatch(deleteCard([cost, title]));
+    onClose();
   };
 
   return (
@@ -80,7 +94,10 @@ export const Modal: FC<{ isOpen: boolean; onClose: () => void; card?: ICard }> =
                   <span className="font-bold text-2xl text-black/80">You will receive: {card?.sprayCost}</span>
                   <DustIcon className="w-8 h-8" />
                 </div>
-                <button className={clsx("relative", "text-3xl font-bold group")}>
+                <button
+                  onClick={() => sprayCard(card!.sprayCost, card!.title)}
+                  className={clsx("relative", "text-3xl font-bold group")}
+                >
                   <SprayIcon className="w-[320px] fill-black/50 group-hover:fill-black/80 transition-colors" />
                   <span
                     className={clsx(

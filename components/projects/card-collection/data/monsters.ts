@@ -16,7 +16,7 @@ export const monstersPack: ICard[] = [
   },
   {
     rarity: Rarities.Common,
-    title: "Venomous Serpent",
+    title: "Venom Serpent",
     description: "The venomous serpent strikes swiftly with its toxic fangs, injecting lethal venom into its prey.",
     hp: 2,
     damage: 3,
@@ -61,7 +61,7 @@ export const monstersPack: ICard[] = [
   },
   {
     rarity: Rarities.Rare,
-    title: "Horrifying Cyclops",
+    title: "Cyclops",
     description:
       "The horrifying cyclops wields a massive club, smashing enemies with brute strength and terrifying ferocity.",
     hp: 2,
@@ -109,7 +109,7 @@ export const monstersPack: ICard[] = [
   },
   {
     rarity: Rarities.Legend,
-    title: "Demonic Overlord",
+    title: "Demon Overlord",
     description:
       "The demonic overlord commands legions of infernal creatures, spreading chaos and destruction across the realm.",
     hp: 12,

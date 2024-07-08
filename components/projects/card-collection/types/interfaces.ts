@@ -1,4 +1,15 @@
-import { Decks, Rarities } from "./enums";
+import { Rarities } from "./enums";
+
+export interface ICollectionState {
+  collection: ICard[];
+  coins: number;
+  dust: number;
+  lastAddedCard: ICard | null;
+}
+
+export interface IIcon {
+  className: string;
+}
 
 export interface IDeck {
   title: string;

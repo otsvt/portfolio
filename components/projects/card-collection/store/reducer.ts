@@ -1,24 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { Decks } from "../types/enums";
-import { ICard } from "../types/interfaces";
+import { ICollectionState } from "../types/interfaces";
+import { addCardToCollection } from "../utils/add-card-to-collection";
 import { orcsPack } from "../data/orcs";
 import { goblinsPack } from "../data/goblins";
 import { elvesPack } from "../data/elves";
 import { humansPack } from "../data/humans";
 import { monstersPack } from "../data/monsters";
 
-export interface collectionState {
-  collection: ICard[];
-  coins: number;
-  dust: number;
-  lastAddedCard?: ICard;
-}
-
-const initialState: collectionState = {
+const initialState: ICollectionState = {
   collection: [],
-  coins: 9000,
+  coins: 2900,
   dust: 0,
+  lastAddedCard: null,
 };
 
 export const collectionSlice = createSlice({
@@ -30,101 +25,46 @@ export const collectionSlice = createSlice({
 
       switch (deck) {
         case Decks.Orcs:
-          if (price <= state.coins) {
-            state.coins -= price;
-            const randomIndex = Math.floor(Math.random() * orcsPack.length);
-            const newCard = orcsPack[randomIndex];
-            const duplicate = state.collection.find((card: ICard) => card.title === newCard.title);
-
-            if (duplicate) {
-              duplicate.amount += 1;
-              state.lastAddedCard = { ...duplicate, amount: 1 };
-            } else {
-              state.collection.push({ ...newCard });
-              state.lastAddedCard = newCard;
-            }
-          } else {
-            console.log("not enough coins");
-          }
+          addCardToCollection(state, orcsPack, price);
           break;
         case Decks.Goblins:
-          if (price <= state.coins) {
-            state.coins -= price;
-            const randomIndex = Math.floor(Math.random() * goblinsPack.length);
-            const newCard = goblinsPack[randomIndex];
-            const duplicate = state.collection.find((card: ICard) => card.title === newCard.title);
-
-            if (duplicate) {
-              duplicate.amount += 1;
-              state.lastAddedCard = { ...duplicate, amount: 1 };
-            } else {
-              state.collection.push({ ...newCard });
-              state.lastAddedCard = newCard;
-            }
-          } else {
-            console.log("not enough coins");
-          }
+          addCardToCollection(state, goblinsPack, price);
           break;
         case Decks.Elves:
-          if (price <= state.coins) {
-            state.coins -= price;
-            const randomIndex = Math.floor(Math.random() * elvesPack.length);
-            const newCard = elvesPack[randomIndex];
-            const duplicate = state.collection.find((card: ICard) => card.title === newCard.title);
-
-            if (duplicate) {
-              duplicate.amount += 1;
-              state.lastAddedCard = { ...duplicate, amount: 1 };
-            } else {
-              state.collection.push({ ...newCard });
-              state.lastAddedCard = newCard;
-            }
-          } else {
-            console.log("not enough coins");
-          }
+          addCardToCollection(state, elvesPack, price);
           break;
         case Decks.Humans:
-          if (price <= state.coins) {
-            state.coins -= price;
-            const randomIndex = Math.floor(Math.random() * humansPack.length);
-            const newCard = humansPack[randomIndex];
-            const duplicate = state.collection.find((card: ICard) => card.title === newCard.title);
-
-            if (duplicate) {
-              duplicate.amount += 1;
-              state.lastAddedCard = { ...duplicate, amount: 1 };
-            } else {
-              state.collection.push({ ...newCard });
-              state.lastAddedCard = newCard;
-            }
-          } else {
-            console.log("not enough coins");
-          }
+          addCardToCollection(state, humansPack, price);
           break;
         case Decks.Monsters:
-          if (price <= state.coins) {
-            state.coins -= price;
-            const randomIndex = Math.floor(Math.random() * monstersPack.length);
-            const newCard = monstersPack[randomIndex];
-            const duplicate = state.collection.find((card: ICard) => card.title === newCard.title);
-
-            if (duplicate) {
-              duplicate.amount += 1;
-              state.lastAddedCard = { ...duplicate, amount: 1 };
-            } else {
-              state.collection.push({ ...newCard });
-              state.lastAddedCard = newCard;
-            }
-          } else {
-            console.log("not enough coins");
-          }
+          addCardToCollection(state, monstersPack, price);
           break;
         default:
           return state;
       }
     },
+    deleteCard: (state, action: PayloadAction<[number, string]>) => {
+      const [cost, title] = action.payload;
+      const currentIndex = state.collection.findIndex((card) => card.title === title);
+
+      if (state.collection[currentIndex].amount > 1) {
+        state.collection[currentIndex].amount -= 1;
+        state.dust += cost;
+      } else {
+        const filteredCollection = state.collection.filter((card) => card.title !== title);
+        state.collection = [...filteredCollection];
+        state.dust += cost;
+      }
+    },
+    convertDust: (state) => {
+      const conversionRate = 8 / 10;
+      const convertedCoins = Math.floor(state.dust * conversionRate);
+
+      state.coins += convertedCoins;
+      state.dust = 0;
+    },
   },
 });
 
-export const { addCard } = collectionSlice.actions;
+export const { addCard, deleteCard, convertDust } = collectionSlice.actions;
 export default collectionSlice.reducer;
