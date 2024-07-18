@@ -16,7 +16,7 @@ const initialState: ICollectionState = {
   lastAddedCard: null,
 };
 
-export const collectionSlice = createSlice({
+const collectionSlice = createSlice({
   name: "collection",
   initialState,
   reducers: {
