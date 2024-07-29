@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 import { IssueStatuses } from "./enums";
 
 export interface IIconProps {
@@ -24,7 +25,7 @@ export interface IIssueStats {
 
 export interface IDesigner {
   id: number;
-  avatar: string;
+  avatar: StaticImageData;
   username: string;
   name: string;
   email: string;
@@ -43,7 +44,7 @@ export interface IComment {
 }
 
 export interface IArt {
-  image: string;
+  image: StaticImageData;
   author_avatar: string;
   author_name: string;
   author_username: string;
