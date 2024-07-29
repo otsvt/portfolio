@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       screens: {
         laptop: "1000px",
+        tall: { raw: "(min-height: 1100px)" },
       },
       padding: {
         main: "calc((1vh + 1vw) * 8)",
@@ -48,6 +49,15 @@ module.exports = {
         textLg: "rgba(255, 255, 255, 0.87)",
         textMd: "rgba(255, 255, 255, 0.6)",
         weatherLight: "rgb(41, 41, 41)",
+        frameDark: "#191921",
+        frameLight: "#F2F1F2",
+        frameBorder: "#2A2A31",
+        bgDark: "#151517",
+        bgLight: "rgb(96 158 235 / 50%)",
+        buttonNav: "#3A6FF8",
+        new: "#0ACF83",
+        done: "#F24E1E",
+        inProgress: "#29A0DC",
       },
       gap: {
         galleryGap: "calc((1vh + 1vw) * 5)",

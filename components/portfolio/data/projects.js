@@ -5,6 +5,8 @@ import gallery from "../images/works/gallery.png";
 import safety from "../images/works/safety.png";
 import cardCollection from "../images/works/card-collection.png";
 import weather from "../images/works/weather.png";
+import community from "../images/works/community.png";
+
 import htmlIcon from "../images/icons/html5.svg";
 import sassIcon from "../images/icons/sass.svg";
 import gulpIcon from "../images/icons/gulp.svg";
@@ -21,6 +23,7 @@ import tailwindIcon from "../images/icons/tailwindcss.svg";
 
 export const projectsLeft = [
   { img: weather, hasAdapt: false, icons: [tsIcon, reactIcon, tanstackIcon, tailwindIcon], link: "/weather" },
+  { img: community, hasAdapt: false, icons: [tsIcon, reactIcon, reduxIcon, tailwindIcon], link: "/community" },
   { img: gallery, hasAdapt: true, icons: [htmlIcon, sassIcon, jsIcon], link: "/gallery" },
   { img: burgers, hasAdapt: false, icons: [reactIcon, sassIcon], link: "/burgers" },
 ];

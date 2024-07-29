@@ -36,12 +36,13 @@ export const Portfolio = ({ basePath }) => {
                   {projectsLeft.map((proj, i) => {
                     return <GalleryItem key={i} proj={proj} ref={(el) => (iconsLeftRef.current[i] = el)} />;
                   })}
-                  <ContactsItem />
+                  <ContactsItem contact="tg" />
                 </div>
                 <div className={styles.galleryWrapper} data-speed="1.1">
                   {projectsRight.map((proj, i) => {
                     return <GalleryItem key={i} proj={proj} ref={(el) => (iconsRightRef.current[i] = el)} />;
                   })}
+                  <ContactsItem contact="gitHub" />
                 </div>
               </main>
             </div>

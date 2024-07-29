@@ -55,6 +55,10 @@
 
 .cardImg {
   .img {
+    @media (min-width: 2200px) {
+      width: 100%;
+    }
+
     border-radius: 0 13px 13px 0;
     height: 100%;
     width: clamp(9.375rem, 1.563rem + 26.04vw, 25rem);
