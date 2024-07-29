@@ -45,7 +45,7 @@ export interface IComment {
 
 export interface IArt {
   image: StaticImageData;
-  author_avatar: string;
+  author_avatar: StaticImageData;
   author_name: string;
   author_username: string;
   date: string;
