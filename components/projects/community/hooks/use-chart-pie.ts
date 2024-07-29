@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 export const useChartPie = (issues: number[], mainLabel: string, optionLabels: string[]): [any, any] => {
   const chartData = {
     type: "pie",

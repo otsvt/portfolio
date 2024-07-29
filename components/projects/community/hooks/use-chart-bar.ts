@@ -1,6 +1,5 @@
 import { priceFormatter } from "../utils/helpers/price-formatter";
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
 export const useChartBar = (finance: number[], mainLabel: string, optionLabels: string[]): [any, any] => {
   const chartData = {
     labels: optionLabels,
